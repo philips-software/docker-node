@@ -2,7 +2,7 @@ FROM node:11.12.0-stretch
 MAINTAINER Forest Keepers <Jeroen.knoops@philips.com>
 
 RUN apt-get update && \
-    apt-get install \
+    apt-get install -y \
       curl \
       jq \
       git \
