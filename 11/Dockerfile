@@ -12,9 +12,6 @@ RUN apt-get update && \
       net-tools && \
     rm -rf /var/lib/apt/lists/*
 
-RUN addgroup -S node && \
-  adduser -S -G node node 
-
 RUN mkdir /app
 RUN chown node:node /app
 
