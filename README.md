@@ -9,24 +9,9 @@ Current versions available:
 ```
 .
 ├── 11
-│   ├── jdk
-│   │   ├── slim
-│   │   │   └── Dockerfile
-│   │   └── slim-aws
-│   │       └── Dockerfile
-│   └── jre
-│       ├── slim
-│       │   └── Dockerfile
-│       └── slim-aws
-│           └── Dockerfile
-├── 8
-│   ├── jdk
-│   │   └── alpine
-│   │       └── Dockerfile
-│   └── jre
-│       └── alpine
-│           └── Dockerfile
-
+│   ├── Dockerfile
+│   └── java
+│       └── Dockerfile
 ```
 ## Usage
 
