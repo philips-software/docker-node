@@ -3,7 +3,7 @@ on: [push]
 name: Build Docker images
 
 jobs:
-  build node:
+  build_node:
     name: Build node
     runs-on: ubuntu-latest
 
@@ -19,7 +19,7 @@ jobs:
         export GITHUB_ORGANIZATION=${{secrets.GITHUB_ORGANIZATION}}
         ./ci/bin/docker_build_and_push.sh 11 node:11 node:11.12 node:11.12.0-stretch
   
-  build node java:
+  build_node_java:
     name: Build node java
     runs-on: ubuntu-latest
 
