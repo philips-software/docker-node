@@ -7,6 +7,7 @@ and this project uses the version of main tool as main version number .
 ## [Unreleased]
 
 ### Changed
+- Uses Github Action instead of travis-ci
 
 ### Added
 - Adds node:11.12.0-stretch with and without openjdk 8

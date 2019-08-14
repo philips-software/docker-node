@@ -1,0 +1,40 @@
+on: [push]
+
+name: Build Docker images
+
+jobs:
+  build_node:
+    name: Build node
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@master
+      with:
+        submodules: true
+
+    - name: Build Docker Images with node
+      run: |
+        export DOCKER_USERNAME=${{secrets.DOCKER_USERNAME}}
+        export DOCKER_PASSWORD='${{secrets.DOCKER_PASSWORD}}'
+        export DOCKER_ORGANIZATION=${{secrets.DOCKER_ORGANIZATION}}
+        export GITHUB_ORGANIZATION=${{secrets.GITHUB_ORGANIZATION}}
+        ./ci/bin/docker_build_and_push.sh 11 node:11 node:11.12 node:11.12.0-stretch
+  
+  build_node_java:
+    name: Build node java
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@master
+      with:
+        submodules: true
+
+    - name: Build Docker Images with node and java
+      run: |
+        export DOCKER_USERNAME=${{secrets.DOCKER_USERNAME}}
+        export DOCKER_PASSWORD='${{secrets.DOCKER_PASSWORD}}'
+        export DOCKER_ORGANIZATION=${{secrets.DOCKER_ORGANIZATION}}
+        export GITHUB_ORGANIZATION=${{secrets.GITHUB_ORGANIZATION}}
+        ./ci/bin/docker_build_and_push.sh 11/java node:java node:11-java node:11.12-java node:11.12.0-java
