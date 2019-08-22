@@ -9,8 +9,10 @@ and this project uses the version of main tool as main version number .
 ### Changed
 - (ci) Fixes small typo in greetings message
 - (ci) Uses Github Action instead of travis-ci
-- Uses Github Actions instead of travis-ci
 - Better Actions workflow 
+- node:lts --> 10.16.3
+- node:stable --> 12.9.0
+- Uses Github Actions instead of travis-ci
 
 ### Added
 - Adds node:11.12.0-stretch with and without openjdk 8

@@ -3,8 +3,8 @@ on: [push]
 name: Build Docker images
 
 jobs:
-  build_node:
-    name: Build node
+  build_node_lts:
+    name: Build node lts
     runs-on: ubuntu-latest
 
     steps:
@@ -15,15 +15,15 @@ jobs:
 
     - name: Build Docker Images with node
       run: |
-        ./ci/bin/docker_build_and_push.sh 11 node:11 node:11.12 node:11.12.0-stretch
+        ./ci/bin/docker_build_and_push.sh 10 node:lts node:10 node:10.16 node:10.16.3 node:10.16.3-stretch
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
         DOCKER_ORGANIZATION: ${{ secrets.DOCKER_ORGANIZATION }}
         GITHUB_ORGANIZATION: ${{ secrets.GITHUB_ORGANIZATION }}
   
-  build_node_java:
-    name: Build node java
+  build_node_lts_java:
+    name: Build node lts java
     runs-on: ubuntu-latest
 
     steps:
@@ -34,7 +34,45 @@ jobs:
 
     - name: Build Docker Images with node and java
       run: |
-        ./ci/bin/docker_build_and_push.sh 11/java node:java node:11-java node:11.12-java node:11.12.0-java
+        ./ci/bin/docker_build_and_push.sh 10/java node:lts-java node:10-java node:10.16-java node:10.16.3-java node:10.16.3-stretch-java
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
+        DOCKER_ORGANIZATION: ${{ secrets.DOCKER_ORGANIZATION }}
+        GITHUB_ORGANIZATION: ${{ secrets.GITHUB_ORGANIZATION }}
+
+  build_node_stable:
+    name: Build node stable 
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@master
+      with:
+        submodules: true
+
+    - name: Build Docker Images with node
+      run: |
+        ./ci/bin/docker_build_and_push.sh 12 node node:stable node:12 node:12.9 node:12.9.0 node:12.9.0-stretch
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
+        DOCKER_ORGANIZATION: ${{ secrets.DOCKER_ORGANIZATION }}
+        GITHUB_ORGANIZATION: ${{ secrets.GITHUB_ORGANIZATION }}
+  
+  build_node_stable_java:
+    name: Build node stable with java 
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@master
+      with:
+        submodules: true
+
+    - name: Build Docker Images with node
+      run: |
+        ./ci/bin/docker_build_and_push.sh 12/java node:java node:stable-java node:12-java node:12.9-java node:12.9.0-java node:12.9.0-stretch-java
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
