@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/philips-software/node.svg?branch=master)](https://travis-ci.com/philips-software/node)
+[![Build Status](https://action-badges.now.sh/philips-software/node)](https://github.com/philips-software/node/actions)
 [![Slack](https://philips-software-slackin.now.sh/badge.svg)](https://philips-software-slackin.now.sh)
 
 # Docker images
@@ -8,7 +8,11 @@ This repo will contain docker images with node
 Current versions available:
 ```
 .
-├── 11
+├── 10
+│   ├── Dockerfile
+│   └── java
+│       └── Dockerfile
+├── 12
 │   ├── Dockerfile
 │   └── java
 │       └── Dockerfile
@@ -18,8 +22,8 @@ Current versions available:
 Images can be found on [https://hub.docker.com/r/philipssoftware/node/](https://hub.docker.com/r/philipssoftware/node/).
 
 ```
-docker run philipssoftware/node:11 node --version
-docker run philipssoftware/node:11-java node --version && java -version
+docker run philipssoftware/node:lts node --version
+docker run philipssoftware/node:12-java node --version && java -version
 ```
 
 ## Content
@@ -34,7 +38,7 @@ This file has a url to the REPO with specific commit-sha of the build.
 Example: 
 
 ```
-$ docker run philipssoftware/node:11 cat REPO
+$ docker run philipssoftware/node:12 cat REPO
 https://github.com/philips-software/node/tree/facb2271e5a563e5d6f65ca3f475cefac37b8b6c
 ```
 
@@ -43,19 +47,25 @@ https://github.com/philips-software/node/tree/facb2271e5a563e5d6f65ca3f475cefac3
 This contains all the similar tags at the point of creation. 
 
 ```
-$ docker run philipssoftware/node:11 cat TAGS
-node node:11 node:11.12 node:11.12.0-stretch
+$ docker run philipssoftware/node:12 cat TAGS
+node node:stable node:12 node:12.9 node:12.9.0 node:12.9.0-stretch
 ```
 
 You can use this to pin down a version of the container from an existing development build for production. When using `node:11` for development. This ensures that you've got all security updates in your build. If you want to pin the version of your image down for production, you can use this file inside of the container to look for the most specific tag, the last one.
 
 ## Simple Tags
 
-### node
-- `node`, `node:11`, `node:11.12`, `node:11.12.0-stretch` [11/Dockerfile](11/Dockerfile)
+### nodeJS LTS
+- `node:lts` `node:10` `node:10.16` `node:10.16.3` `node:10.16.3-stretch` [10/Dockerfile](10/Dockerfile)
 
-### node with openjdk 
-- `node:java`, `node:11-java`, `node:11.12-java`, `node:11.12.0-java` [11/java/Dockerfile](11/java/Dockerfile)
+### nodeJS stable
+- `node` `node:stable` `node:12` `node:12.9` `node:12.9.0` `node:12.9.0-stretch` [12/Dockerfile](12/Dockerfile)
+
+### nodeJS LTS with openjdk 
+- `node:lts-java` `node:10-java` `node:10.16-java` `node:10.16.3-java` `node:10.16.3-stretch-java` [10/java/Dockerfile](10/java/Dockerfile)
+
+### nodeJS stable with openjdk 
+- `node:java` `node:stable-java` `node:12-java` `node:12.9-java` `node:12.9.0-java` `node:12.9.0-stretch-java` [12/java/Dockerfile](12/java/Dockerfile)
 
 ## Why
 
