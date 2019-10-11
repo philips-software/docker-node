@@ -7,6 +7,7 @@ and this project uses the version of main tool as main version number .
 ## [Unreleased]
 
 ### Changed
+- [#9] - Add prefix docker- in repository name
 - (ci) Fixes small typo in greetings message
 - (ci) Uses Github Action instead of travis-ci
 - Better Actions workflow 
@@ -17,4 +18,5 @@ and this project uses the version of main tool as main version number .
 ### Added
 - Adds node:11.12.0-stretch with and without openjdk 8
 
-[Unreleased]: https://github.com/philips-software/node
+[#9]: https://github.com/philips-software/docker-node/issues/9
+[Unreleased]: https://github.com/philips-software/docker-node
