@@ -1,4 +1,4 @@
-[![Build Status](https://action-badges.now.sh/philips-software/node)](https://github.com/philips-software/node/actions)
+[![Build Status](https://github.com/philips-software/docker-node/workflows/build/badge.svg)](https://github.com/philips-software/docker-node/actions/)
 [![Slack](https://philips-software-slackin.now.sh/badge.svg)](https://philips-software-slackin.now.sh)
 
 # Docker images
@@ -39,7 +39,7 @@ Example:
 
 ```
 $ docker run philipssoftware/node:12 cat REPO
-https://github.com/philips-software/node/tree/facb2271e5a563e5d6f65ca3f475cefac37b8b6c
+https://github.com/philips-software/docker-node/tree/facb2271e5a563e5d6f65ca3f475cefac37b8b6c
 ```
 
 ### TAGS
@@ -78,7 +78,7 @@ That's why we want our own docker file definitions.
 
 ## Issues
 
-- If you have an issue: report it on the [issue tracker](https://github.com/philips-software/node/issues)
+- If you have an issue: report it on the [issue tracker](https://github.com/philips-software/docker-node/issues)
 
 ## Author
 
