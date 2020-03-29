@@ -3,68 +3,68 @@ on: [push]
 name: Build Docker images
 
 jobs:
-  build_node_lts:
-    name: Build node lts
+  build_node_10:
+    name: Build node 10
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Build Docker Images with node
-      uses: philips-software/docker-ci-scripts@v2.0.1
+      uses: philips-software/docker-ci-scripts@v2.1.0
       with:
         dockerfile: 10
         image-name: node
-        tags: lts 10 10.16 10.16.3 10.16.3-stretch
+        tags: 10 10.19 10.19.0 10.19.0-stretch
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
         DOCKER_ORGANIZATION: philipssoftware
         GITHUB_ORGANIZATION: philips-software
   
-  build_node_lts_java:
-    name: Build node lts java
+  build_node_10_java:
+    name: Build node 10 java
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Build Docker Images with node and java
-      uses: philips-software/docker-ci-scripts@v2.0.1
+      uses: philips-software/docker-ci-scripts@v2.1.0
       with:
         dockerfile: 10/java
         image-name: node
-        tags: lts-java 10-java 10.16-java 10.16.3-java 10.16.3-stretch-java
+        tags: 10-java 10.19-java 10.19.0-java 10.19.0-stretch-java
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
         DOCKER_ORGANIZATION: philipssoftware
         GITHUB_ORGANIZATION: philips-software
 
-  build_node_stable:
-    name: Build node stable 
+  build_node_lts:
+    name: Build node lts
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Build Docker Images with node
-      uses: philips-software/docker-ci-scripts@v2.0.1
+      uses: philips-software/docker-ci-scripts@v2.1.0
       with:
-        dockerfile: 12
+        dockerfile: lts
         image-name: node
-        tags: latest stable 12 12.9 12.9.0 12.9.0-stretch
+        tags: latest lts stable 12 12.16 12.16.1 12.16.1-stretch
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
         DOCKER_ORGANIZATION: philipssoftware
         GITHUB_ORGANIZATION: philips-software
-  
-  build_node_stable_java:
-    name: Build node stable with java 
+
+  build_node_lts_java:
+    name: Build node lts with java
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Build Docker Images with node
-      uses: philips-software/docker-ci-scripts@v2.0.1
+      uses: philips-software/docker-ci-scripts@v2.1.0
       with:
-        dockerfile: 12/java
+        dockerfile: lts/java
         image-name: node
-        tags: java stable-java 12-java 12.9-java 12.9.0-java 12.9.0-stretch-java
+        tags: java lts-java stable-java 12-java 12.16-java 12.16.1-java 12.16.1-stretch-java
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
