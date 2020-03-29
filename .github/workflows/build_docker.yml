@@ -11,7 +11,7 @@ jobs:
     - name: Build Docker Images with node
       uses: philips-software/docker-ci-scripts@v2.1.0
       with:
-        dockerfile: 10
+        dockerfile: 10/vanilla
         image-name: node
         tags: 10 10.19 10.19.0 10.19.0-stretch
       env:
@@ -45,7 +45,7 @@ jobs:
     - name: Build Docker Images with node
       uses: philips-software/docker-ci-scripts@v2.1.0
       with:
-        dockerfile: lts
+        dockerfile: lts/vanilla
         image-name: node
         tags: lts 12 12.16 12.16.1 12.16.1-stretch
       env:
@@ -79,7 +79,7 @@ jobs:
     - name: Build Docker Images with node
       uses: philips-software/docker-ci-scripts@v2.1.0
       with:
-        dockerfile: stable
+        dockerfile: stable/vanilla
         image-name: node
         tags: latest stable 13 13.12 13.12.0 13.12.0-stretch
       env:
