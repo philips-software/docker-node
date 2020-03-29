@@ -1,4 +1,4 @@
-[![Build Status](https://github.com/philips-software/docker-node/workflows/build/badge.svg)](https://github.com/philips-software/docker-node/actions/)
+![Build Docker images](https://github.com/philips-software/docker-node/workflows/Build%20Docker%20images/badge.svg)
 [![Slack](https://philips-software-slackin.now.sh/badge.svg)](https://philips-software-slackin.now.sh)
 
 # Docker images
