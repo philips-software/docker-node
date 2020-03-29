@@ -7,6 +7,7 @@ and this project uses the version of main tool as main version number .
 ## [Unreleased]
 
 ### Changed
+- Use docker-ci-scripts actions
 - [#9] - Add prefix docker- in repository name
 - (ci) Fixes small typo in greetings message
 - (ci) Uses Github Action instead of travis-ci
