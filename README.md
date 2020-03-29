@@ -55,17 +55,17 @@ You can use this to pin down a version of the container from an existing develop
 
 ## Simple Tags
 
-### nodeJS LTS
-- `node:lts` `node:10` `node:10.16` `node:10.16.3` `node:10.16.3-stretch` [10/Dockerfile](10/Dockerfile)
+### nodeJS 10
+- `node:10` `node:10.19` `node:10.19.0` `node:10.19.0-stretch` [10/Dockerfile](10/Dockerfile)
 
-### nodeJS stable
-- `node` `node:stable` `node:12` `node:12.9` `node:12.9.0` `node:12.9.0-stretch` [12/Dockerfile](12/Dockerfile)
+### nodeJS lts
+- `node` `node:lts` `node:stable` `node:12` `node:12.16` `node:12.16.1` `node:12.16.1-stretch` [12/Dockerfile](12/Dockerfile)
 
-### nodeJS LTS with openjdk 
-- `node:lts-java` `node:10-java` `node:10.16-java` `node:10.16.3-java` `node:10.16.3-stretch-java` [10/java/Dockerfile](10/java/Dockerfile)
+### nodeJS 10 with openjdk
+- `node:10-java` `node:10.19-java` `node:10.19.0-java` `node:10.19.0-stretch-java` [10/java/Dockerfile](10/java/Dockerfile)
 
-### nodeJS stable with openjdk 
-- `node:java` `node:stable-java` `node:12-java` `node:12.9-java` `node:12.9.0-java` `node:12.9.0-stretch-java` [12/java/Dockerfile](12/java/Dockerfile)
+### nodeJS lts with openjdk
+- `node:java` `node:lts-java` `node:stable-java` `node:12-java` `node:12.16-java` `node:12.16.1-java` `node:12.16.1-stretch-java` [12/java/Dockerfile](12/java/Dockerfile)
 
 ## Why
 
