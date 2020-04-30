@@ -1,4 +1,4 @@
-FROM node:13.12.0-stretch
+FROM node:14.0.0-stretch
 MAINTAINER Forest Keepers <Jeroen.knoops@philips.com>
 
 RUN apt-get update && \
@@ -9,7 +9,8 @@ RUN apt-get update && \
       wget \
       openssl \
       bash \
-      net-tools && \
+      net-tools \
+      default-jdk && \
     rm -rf /var/lib/apt/lists/*
 
 RUN mkdir /app
