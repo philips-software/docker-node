@@ -18,7 +18,7 @@ Current versions available:
 │   │   └── Dockerfile
 │   └── vanilla
 │       └── Dockerfile
-├── 13
+├── 14
 │   ├── java
 │   │   └── Dockerfile
 │   └── vanilla
@@ -55,7 +55,7 @@ This contains all the similar tags at the point of creation.
 
 ```
 $ docker run philipssoftware/node:12 cat TAGS
-node node:stable node:12 node:12.9 node:12.9.0 node:12.9.0-stretch
+node node:stable node:12 node:12.16 node:12.16.3 node:12.16.3-stretch
 ```
 
 You can use this to pin down a version of the container from an existing development build for production. When using `node:11` for development. This ensures that you've got all security updates in your build. If you want to pin the version of your image down for production, you can use this file inside of the container to look for the most specific tag, the last one.
@@ -63,22 +63,22 @@ You can use this to pin down a version of the container from an existing develop
 ## Simple Tags
 
 ### nodeJS stable
-- `node` `node:stable` `node:13` `node:13.12` `node:13.12.0` `node:13.12.0-stretch` [13/vanilla/Dockerfile](13/vanilla/Dockerfile)
+- `node` `node:stable` `node:14` `node:14.0` `node:14.0.0` `node:14.0.0-stretch` [14/vanilla/Dockerfile](14/vanilla/Dockerfile)
 
 ### nodeJS lts
-- `node:lts` `node:12` `node:12.16` `node:12.16.1` `node:12.16.1-stretch` [12/vanilla/Dockerfile](12/vanilla/Dockerfile)
+- `node:lts` `node:12` `node:12.16` `node:12.16.3` `node:12.16.3-stretch` [12/vanilla/Dockerfile](12/vanilla/Dockerfile)
 
 ### nodeJS 10
-- `node:10` `node:10.19` `node:10.19.0` `node:10.19.0-stretch` [10/vanilla/Dockerfile](10/vanilla/Dockerfile)
+- `node:10` `node:10.20` `node:10.20.1` `node:10.20.1-stretch` [10/vanilla/Dockerfile](10/vanilla/Dockerfile)
 
 ### nodeJS stable with openjdk
-- `node:java` `node:stable-java` `node:13-java` `node:13.12-java` `node:13.12.0-java` `node:13.12.0-stretch-java` [13/java/Dockerfile](13/java/Dockerfile)`
+- `node:java` `node:stable-java` `node:14-java` `node:14.0-java` `node:14.0.0-java` `node:14.0.0-stretch-java` [14/java/Dockerfile](14/java/Dockerfile)`
 
 ### nodeJS lts with openjdk
-- `node:lts-java` `node:12-java` `node:12.16-java` `node:12.16.1-java` `node:12.16.1-stretch-java` [12/java/Dockerfile](12/java/Dockerfile)
+- `node:lts-java` `node:12-java` `node:12.16-java` `node:12.16.3-java` `node:12.16.3-stretch-java` [12/java/Dockerfile](12/java/Dockerfile)
 
 ### nodeJS 10 with openjdk
-- `node:10-java` `node:10.19-java` `node:10.19.0-java` `node:10.19.0-stretch-java` [10/java/Dockerfile](10/java/Dockerfile)
+- `node:10-java` `node:10.20-java` `node:10.20.1-java` `node:10.20.1-stretch-java` [10/java/Dockerfile](10/java/Dockerfile)
         
 
 ## Why
