@@ -10,26 +10,7 @@ updates:
     schedule:
       interval: "daily"
 
-  - package-ecosystem: "docker"
-    directory: "/10/java/"
-    schedule:
-      interval: "daily"
-
-  - package-ecosystem: "docker"
-    directory: "/10/vanilla/"
-    schedule:
-      interval: "daily"
-
-  - package-ecosystem: "docker"
-    directory: "/12/java/"
-    schedule:
-      interval: "daily"
-
-  - package-ecosystem: "docker"
-    directory: "/12/vanilla/"
-    schedule:
-      interval: "daily"
-  
+  # Only the latest versions
   - package-ecosystem: "docker"
     directory: "/14/java/"
     schedule:
