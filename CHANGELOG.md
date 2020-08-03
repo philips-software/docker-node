@@ -11,6 +11,7 @@ and this project uses the version of main tool as main version number .
 - Dependabot automatic updates dependencies
 
 ### Changed
+- Update versions 10, lts and stable to 10.22.0, 12.18.3, 14.7.0
 - Update versions 10, lts and stable to 10.20.1, 12.16.3, 14.0.0
 - [#14] - Update stable versions
 - [#12] - Update lts versions
