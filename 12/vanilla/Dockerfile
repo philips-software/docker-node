@@ -1,4 +1,4 @@
-FROM node:12.16.3-stretch
+FROM node:14.7.0-stretch
 MAINTAINER Forest Keepers <Jeroen.knoops@philips.com>
 
 RUN apt-get update && \
