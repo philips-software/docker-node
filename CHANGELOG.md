@@ -4,13 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project uses the version of main tool as main version number .
 
-## [Unreleased]
-
-### Added
-
-- Dependabot automatic updates dependencies
-
 ### Changed
+- Update version to 14.10.0-stretch
+- Dependabot automatic updates dependencies
 - Update versions 10, lts and stable to 10.22.0, 12.18.3, 14.7.0
 - Update versions 10, lts and stable to 10.20.1, 12.16.3, 14.0.0
 - [#14] - Update stable versions
@@ -23,11 +19,8 @@ and this project uses the version of main tool as main version number .
 - node:lts --> 10.16.3
 - node:stable --> 12.9.0
 - Uses Github Actions instead of travis-ci
-
-### Added
 - Adds node:11.12.0-stretch with and without openjdk 8
 
 [#14]: https://github.com/philips-software/docker-node/issues/14
 [#12]: https://github.com/philips-software/docker-node/issues/12
 [#9]: https://github.com/philips-software/docker-node/issues/9
-[Unreleased]: https://github.com/philips-software/docker-node

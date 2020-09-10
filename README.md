@@ -63,7 +63,7 @@ You can use this to pin down a version of the container from an existing develop
 ## Simple Tags
 
 ### nodeJS stable
-- `node` `node:stable` `node:14` `node:14.9` `node:14.9.0` `node:14.9.0-stretch` [14/vanilla/Dockerfile](14/vanilla/Dockerfile)
+- `node` `node:stable` `node:14` `node:14.10` `node:14.10.0` `node:14.10.0-stretch` [14/vanilla/Dockerfile](14/vanilla/Dockerfile)
 
 ### nodeJS lts
 - `node:lts` `node:12` `node:12.18` `node:12.18.3` `node:12.18.3-stretch` [12/vanilla/Dockerfile](12/vanilla/Dockerfile)
@@ -72,7 +72,7 @@ You can use this to pin down a version of the container from an existing develop
 - `node:10` `node:10.22` `node:10.22.0` `node:10.22.0-stretch` [10/vanilla/Dockerfile](10/vanilla/Dockerfile)
 
 ### nodeJS stable with openjdk
-- `node:java` `node:stable-java` `node:14-java` `node:14.9-java` `node:14.9.0-java` `node:14.9.0-stretch-java` [14/java/Dockerfile](14/java/Dockerfile)`
+- `node:java` `node:stable-java` `node:14-java` `node:14.10-java` `node:14.10.0-java` `node:14.10.0-stretch-java` [14/java/Dockerfile](14/java/Dockerfile)`
 
 ### nodeJS lts with openjdk
 - `node:lts-java` `node:12-java` `node:12.18-java` `node:12.18.3-java` `node:12.18.3-stretch-java` [12/java/Dockerfile](12/java/Dockerfile)
