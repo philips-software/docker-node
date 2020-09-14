@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build Docker Images with node
-      uses: philips-software/docker-ci-scripts@v2.2.2
+      uses: philips-software/docker-ci-scripts@v2.3.0
       with:
         dockerfile: 10/vanilla
         image-name: node
@@ -26,7 +26,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build Docker Images with node and java
-      uses: philips-software/docker-ci-scripts@v2.2.2
+      uses: philips-software/docker-ci-scripts@v2.3.0
       with:
         dockerfile: 10/java
         image-name: node
@@ -43,7 +43,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build Docker Images with node
-      uses: philips-software/docker-ci-scripts@v2.2.2
+      uses: philips-software/docker-ci-scripts@v2.3.0
       with:
         dockerfile: lts/vanilla
         image-name: node
@@ -60,7 +60,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build Docker Images with node
-      uses: philips-software/docker-ci-scripts@v2.2.2
+      uses: philips-software/docker-ci-scripts@v2.3.0
       with:
         dockerfile: lts/java
         image-name: node
@@ -77,7 +77,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build Docker Images with node
-      uses: philips-software/docker-ci-scripts@v2.2.2
+      uses: philips-software/docker-ci-scripts@v2.3.0
       with:
         dockerfile: stable/vanilla
         image-name: node
@@ -94,7 +94,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build Docker Images with node
-      uses: philips-software/docker-ci-scripts@v2.2.2
+      uses: philips-software/docker-ci-scripts@v2.3.0
       with:
         dockerfile: stable/java
         image-name: node
