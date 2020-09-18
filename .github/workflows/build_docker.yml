@@ -19,6 +19,16 @@ jobs:
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
         DOCKER_ORGANIZATION: philipssoftware
         GITHUB_ORGANIZATION: philips-software
+    - uses: philips-labs/tern-action@v1.1.0
+      id: scan
+      with:
+        image: node:10
+        format: json
+        output: node-10.json
+    - uses: actions/upload-artifact@v2
+      with:
+        name: tern
+        path: ${{ steps.scan.outputs.file }}
   
   build_node_10_java:
     name: Build node 10 java
