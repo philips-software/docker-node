@@ -22,7 +22,7 @@ jobs:
     - uses: philips-labs/tern-action@v1.1.0
       id: scan
       with:
-        image: node:10
+        image: philipssoftware/node:10
         format: json
         output: node-10.json
     - uses: actions/upload-artifact@v2
