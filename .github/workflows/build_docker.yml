@@ -81,7 +81,7 @@ jobs:
       with:
         dockerfile: stable/vanilla
         image-name: node
-        tags: latest stable 14 14.11 14.11.0 14.11.0-stretch
+        tags: latest stable 14 14.12 14.12.0 14.12.0-stretch
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
@@ -98,7 +98,7 @@ jobs:
       with:
         dockerfile: stable/java
         image-name: node
-        tags: java stable-java 14-java 14.11-java 14.11.0-java 14.11.0-stretch-java
+        tags: java stable-java 14-java 14.12-java 14.12.0-java 14.12.0-stretch-java
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
