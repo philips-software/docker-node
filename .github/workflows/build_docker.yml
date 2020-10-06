@@ -3,74 +3,6 @@ on: [push]
 name: Build Docker images
 
 jobs:
-  build_node_10:
-    name: Build node 10
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build Docker Images with node
-      uses: philips-software/docker-ci-scripts@v3.1.0
-      with:
-        dockerfile: 10/vanilla
-        image-name: node
-        tags: 10 10.22 10.22.1 10.22.1-stretch
-      env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
-        DOCKER_ORGANIZATION: philipssoftware
-        GITHUB_ORGANIZATION: philips-software
-  
-  build_node_10_java:
-    name: Build node 10 java
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build Docker Images with node and java
-      uses: philips-software/docker-ci-scripts@v3.1.0
-      with:
-        dockerfile: 10/java
-        image-name: node
-        tags: 10-java 10.22-java 10.22.1-java 10.22.1-stretch-java
-      env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
-        DOCKER_ORGANIZATION: philipssoftware
-        GITHUB_ORGANIZATION: philips-software
-
-  build_node_lts:
-    name: Build node lts
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build Docker Images with node
-      uses: philips-software/docker-ci-scripts@v3.1.0
-      with:
-        dockerfile: lts/vanilla
-        image-name: node
-        tags: lts 12 12.18 12.18.4 12.18.4-stretch
-      env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
-        DOCKER_ORGANIZATION: philipssoftware
-        GITHUB_ORGANIZATION: philips-software
-
-  build_node_lts_java:
-    name: Build node lts with java
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build Docker Images with node
-      uses: philips-software/docker-ci-scripts@v3.1.0
-      with:
-        dockerfile: lts/java
-        image-name: node
-        tags: lts-java 12-java 12.18-java 12.18.4-java 12.18.4-stretch-java
-      env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
-        DOCKER_ORGANIZATION: philipssoftware
-        GITHUB_ORGANIZATION: philips-software
-
   build_node_stable:
     name: Build node stable
     runs-on: ubuntu-latest
@@ -81,7 +13,8 @@ jobs:
       with:
         dockerfile: stable/vanilla
         image-name: node
-        tags: latest stable 14 14.13 14.13.0 14.13.0-stretch
+        tags: 14.12 14.12.0 14.12.0-stretch
+        push-branches: recreate-14-12
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
@@ -98,7 +31,8 @@ jobs:
       with:
         dockerfile: stable/java
         image-name: node
-        tags: java stable-java 14-java 14.13-java 14.13.0-java 14.13.0-stretch-java
+        tags: 14.12-java 14.12.0-java 14.12.0-stretch-java
+        push-branches: recreate-14-12
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
