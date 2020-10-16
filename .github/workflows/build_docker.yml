@@ -98,8 +98,7 @@ jobs:
       with:
         dockerfile: stable/java
         image-name: node
-        tags: 14-java-lerna
-        push-branches: add-lerna
+        tags: java stable-java 14-java 14.13-java 14.13.1-java 14.13.1-stretch-java-2
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
