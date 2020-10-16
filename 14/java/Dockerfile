@@ -16,6 +16,8 @@ RUN apt-get update && \
 RUN mkdir /app
 RUN chown node:node /app
 
+RUN yarn global add lerna
+
 WORKDIR /app
 
 ADD REPO .
