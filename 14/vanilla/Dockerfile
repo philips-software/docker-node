@@ -15,8 +15,6 @@ RUN apt-get update && \
 RUN mkdir /app
 RUN chown node:node /app
 
-USER node
-
 WORKDIR /app
 
 ADD REPO .
