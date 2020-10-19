@@ -13,10 +13,14 @@ updates:
   # Only the latest versions
   - package-ecosystem: "docker"
     directory: "/14/java/"
+    reviewers:
+      - "JeroenKnoops"
     schedule:
       interval: "daily"
 
   - package-ecosystem: "docker"
     directory: "/14/vanilla/"
+    reviewers:
+      - "JeroenKnoops"
     schedule:
       interval: "daily"
