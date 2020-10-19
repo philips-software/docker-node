@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project uses the version of main tool as main version number .
 
 ### Changed
+- Update version to 14.14.0-stretch
 - Add lerna
 - Remove USER node. GitHub actions requires root in order to do a checkout.
 - Update version to 14.13.1-stretch
