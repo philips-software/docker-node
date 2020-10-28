@@ -1,5 +1,5 @@
-FROM node:14.14.0-stretch
-MAINTAINER Forest Keepers <Jeroen.knoops@philips.com>
+FROM node:15.0.0-stretch
+LABEL maintainer="Forest Keepers <Jeroen.knoops@philips.com>"
 
 RUN apt-get update && \
     apt-get install -y \
@@ -9,6 +9,7 @@ RUN apt-get update && \
       wget \
       openssl \
       bash \
+      tar \
       net-tools && \
     rm -rf /var/lib/apt/lists/*
 
