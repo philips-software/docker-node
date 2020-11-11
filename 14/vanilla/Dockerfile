@@ -1,4 +1,4 @@
-FROM node:10.22.1-stretch
+FROM node:14.15.0-stretch
 MAINTAINER Forest Keepers <Jeroen.knoops@philips.com>
 
 RUN apt-get update && \
@@ -14,6 +14,8 @@ RUN apt-get update && \
 
 RUN mkdir /app
 RUN chown node:node /app
+
+RUN yarn global add lerna
 
 WORKDIR /app
 

@@ -1,4 +1,4 @@
-FROM node:15.0.0-stretch
+FROM node:15.1.0-stretch
 LABEL maintainer="Forest Keepers <Jeroen.knoops@philips.com>"
 
 RUN apt-get update && \
