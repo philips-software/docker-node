@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project uses the version of main tool as main version number .
 
 ### Changed
+- lts --> 14.15.0
+- stable --> 15.2.0
 - Update version to 15.0.0-stretch
 - Update version to 14.14.0-stretch
 - Add lerna

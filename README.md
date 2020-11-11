@@ -8,12 +8,12 @@ This repo will contain docker images with node
 Current versions available:
 ```
 .
-├── 10
+├── 12
 │   ├── java
 │   │   └── Dockerfile
 │   └── vanilla
 │       └── Dockerfile
-├── 12
+├── 14
 │   ├── java
 │   │   └── Dockerfile
 │   └── vanilla
@@ -63,22 +63,22 @@ You can use this to pin down a version of the container from an existing develop
 ## Simple Tags
 
 ### nodeJS stable
-- `node` `node:stable` `node:15` `node:15.0` `node:15.0.0` `node:15.0.0-stretch` [15/vanilla/Dockerfile](15/vanilla/Dockerfile)
+- `node` `node:stable` `node:15` `node:15.2` `node:15.2.0` `node:14.15.0-stretch` [15/vanilla/Dockerfile](15/vanilla/Dockerfile)
 
 ### nodeJS lts
-- `node:lts` `node:12` `node:12.18` `node:12.18.4` `node:12.18.4-stretch` [12/vanilla/Dockerfile](12/vanilla/Dockerfile)
+- `node:lts` `node:14` `node:14.15` `node:14.15.0` `node:14.15.0-stretch` [14/vanilla/Dockerfile](14/vanilla/Dockerfile)
 
-### nodeJS 10
-- `node:10` `node:10.22` `node:10.22.1` `node:10.22.1-stretch` [10/vanilla/Dockerfile](10/vanilla/Dockerfile)
+### nodeJS 12
+- `node:12` `node:12.19` `node:12.19.0` `node:12.19.0-stretch` [10/vanilla/Dockerfile](10/vanilla/Dockerfile)
 
 ### nodeJS stable with openjdk
-- `node:java` `node:stable-java` `node:15-java` `node:15.0-java` `node:15.0.0-java` `node:15.0.0-stretch-java` [15/java/Dockerfile](1hhhhha/Dockerfile)`
+- `node:java` `node:stable-java` `node:15-java` `node:15.2-java` `node:15.2.0-java` `node:15.2.0-stretch-java` [15/java/Dockerfile](15/java/Dockerfile)`
 
 ### nodeJS lts with openjdk
-- `node:lts-java` `node:12-java` `node:12.18-java` `node:12.18.4-java` `node:12.18.4-stretch-java` [12/java/Dockerfile](12/java/Dockerfile)
+- `node:lts-java` `node:14-java` `node:14.15-java` `node:14.15.0-java` `node:14.15.0-stretch-java` [14/java/Dockerfile](14/java/Dockerfile)
 
-### nodeJS 10 with openjdk
-- `node:10-java` `node:10.22-java` `node:10.22.1-java` `node:10.22.1-stretch-java` [10/java/Dockerfile](10/java/Dockerfile)
+### nodeJS 12 with openjdk
+- `node:12-java` `node:12.19-java` `node:12.19.0-java` `node:12.19.0-stretch-java` [12/java/Dockerfile](12/java/Dockerfile)
         
 
 ## Why
