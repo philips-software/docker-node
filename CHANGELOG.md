@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project uses the version of main tool as main version number .
 
 ### Changed
+- lts --> 14.15.3
+- lts --> 14.15.2
 - lts --> 14.15.0
 - stable --> 15.1.0
 - Update version to 15.0.0-stretch
