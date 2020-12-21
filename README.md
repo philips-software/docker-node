@@ -66,7 +66,7 @@ You can use this to pin down a version of the container from an existing develop
 - `node` `node:stable` `node:15` `node:15.3` `node:15.3.0` `node:15.3.0-stretch` [15/vanilla/Dockerfile](15/vanilla/Dockerfile)
 
 ### nodeJS lts
-- `node:lts` `node:14` `node:14.15` `node:14.15.2` `node:14.15.2-stretch` [14/vanilla/Dockerfile](14/vanilla/Dockerfile)
+- `node:lts` `node:14` `node:14.15` `node:14.15.3` `node:14.15.3-stretch` [14/vanilla/Dockerfile](14/vanilla/Dockerfile)
 
 ### nodeJS 12
 - `node:12` `node:12.20` `node:12.20.0` `node:12.20.0-stretch` [10/vanilla/Dockerfile](10/vanilla/Dockerfile)
@@ -75,7 +75,7 @@ You can use this to pin down a version of the container from an existing develop
 - `node:java` `node:stable-java` `node:15-java` `node:15.3-java` `node:15.3.0-java` `node:15.3.0-stretch-java` [15/java/Dockerfile](15/java/Dockerfile)`
 
 ### nodeJS lts with openjdk
-- `node:lts-java` `node:14-java` `node:14.15-java` `node:14.15.2-java` `node:14.15.2-stretch-java` [14/java/Dockerfile](14/java/Dockerfile)
+- `node:lts-java` `node:14-java` `node:14.15-java` `node:14.15.3-java` `node:14.15.3-stretch-java` [14/java/Dockerfile](14/java/Dockerfile)
 
 ### nodeJS 12 with openjdk
 - `node:12-java` `node:12.20-java` `node:12.20.0-java` `node:12.20.0-stretch-java` [12/java/Dockerfile](12/java/Dockerfile)
