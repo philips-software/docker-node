@@ -19,7 +19,7 @@ jobs:
       with:
         dockerfile: 12/vanilla
         image-name: node
-        tags: 12 12.20 12.20.0 12.20.0-stretch
+        tags: 12 12.20 12.20.0 12.20.0-buster
         push-branches: main
   
   build_node_12_java:
@@ -32,7 +32,7 @@ jobs:
       with:
         dockerfile: 12/java
         image-name: node
-        tags: 12-java 12.20-java 12.20.0-java 12.20.0-stretch-java
+        tags: 12-java 12.20-java 12.20.0-java 12.20.0-buster-slim-java
         push-branches: main
 
   build_node_lts:
@@ -45,7 +45,7 @@ jobs:
       with:
         dockerfile: lts/vanilla
         image-name: node
-        tags: lts 14 14.15 14.15.3 14.15.3-stretch
+        tags: lts 14 14.15 14.15.4 14.15.4-buster
         push-branches: main
 
   build_node_lts_java:
@@ -58,7 +58,7 @@ jobs:
       with:
         dockerfile: lts/java
         image-name: node
-        tags: lts-java 14-java 14.15-java 14.15.3-java 14.15.3-stretch-java
+        tags: lts-java 14-java 14.15-java 14.15.4-java 14.15.4-buster-slim-java
         push-branches: main
 
   build_node_stable:
@@ -71,7 +71,7 @@ jobs:
       with:
         dockerfile: stable/vanilla
         image-name: node
-        tags: latest stable 15 15.3 15.3.0 15.3.0-stretch
+        tags: latest stable 15 15.5 15.5.1 15.5.1-buster
         push-branches: main
 
   build_node_stable_java:
@@ -84,5 +84,5 @@ jobs:
       with:
         dockerfile: stable/java
         image-name: node
-        tags: java stable-java 15-java 15.3-java 15.3.0-java 15.3.0-stretch-java
+        tags: java stable-java 15-java 15.5-java 15.5.1-java 15.5.1-buster-java
         push-branches: main
