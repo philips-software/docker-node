@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project uses the version of main tool as main version number .
 
 ### Changed
+- Updated versions
 - Use buster in stead of stretch
 - lts --> 14.15.3
 - lts --> 14.15.2
