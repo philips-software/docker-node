@@ -63,22 +63,22 @@ You can use this to pin down a version of the container from an existing develop
 ## Simple Tags
 
 ### nodeJS stable
-- `node` `node:stable` `node:15` `node:15.10` `node:15.10.0` `node:15.10.0-buster` [15/vanilla/Dockerfile](15/vanilla/Dockerfile)
+- `node` `node:stable` `node:15` `node:15.14` `node:15.14.0` `node:15.14.0-buster` [15/vanilla/Dockerfile](15/vanilla/Dockerfile)
 
 ### nodeJS lts
-- `node:lts` `node:14` `node:14.16` `node:14.16.0` `node:14.16.0-buster` [14/vanilla/Dockerfile](14/vanilla/Dockerfile)
+- `node:lts` `node:14` `node:14.16` `node:14.16.1` `node:14.16.1-buster` [14/vanilla/Dockerfile](14/vanilla/Dockerfile)
 
 ### nodeJS 12
-- `node:12` `node:12.21` `node:12.21.0` `node:12.21.0-buster-slim` [10/vanilla/Dockerfile](10/vanilla/Dockerfile)
+- `node:12` `node:12.21` `node:12.22.1` `node:12.22.1-buster-slim` [10/vanilla/Dockerfile](10/vanilla/Dockerfile)
 
 ### nodeJS stable with openjdk
-- `node:java` `node:stable-java` `node:15-java` `node:15.10-java` `node:15.10.0-java` `node:15.10.0-buster-java` [15/java/Dockerfile](15/java/Dockerfile)`
+- `node:java` `node:stable-java` `node:15-java` `node:15.14-java` `node:15.14.1-java` `node:15.14.1-buster-java` [15/java/Dockerfile](15/java/Dockerfile)`
 
 ### nodeJS lts with openjdk
-- `node:lts-java` `node:14-java` `node:14.16-java` `node:14.16.0-java` `node:14.16.0-buster-slim-java` [14/java/Dockerfile](14/java/Dockerfile)
+- `node:lts-java` `node:14-java` `node:14.16-java` `node:14.16.1-java` `node:14.16.1-buster-slim-java` [14/java/Dockerfile](14/java/Dockerfile)
 
 ### nodeJS 12 with openjdk
-- `node:12-java` `node:12.21-java` `node:12.21.0-java` `node:12.21.0-buster-slim-java` [12/java/Dockerfile](12/java/Dockerfile)
+- `node:12-java` `node:12.22-java` `node:12.22.1-java` `node:12.22.1-buster-slim-java` [12/java/Dockerfile](12/java/Dockerfile)
         
 
 ## Why
