@@ -19,7 +19,7 @@ jobs:
       with:
         dockerfile: 12/vanilla
         image-name: node
-        tags: 12 12.20 12.20.0 12.20.0-buster
+        tags: 12 12.20 12.22.1 12.22.1-buster
         push-branches: main
   
   build_node_12_java:
@@ -32,7 +32,7 @@ jobs:
       with:
         dockerfile: 12/java
         image-name: node
-        tags: 12-java 12.20-java 12.20.0-java 12.20.0-buster-slim-java
+        tags: 12-java 12.22-java 12.22.1-java 12.22.1-buster-slim-java
         push-branches: main
 
   build_node_lts:
@@ -45,7 +45,7 @@ jobs:
       with:
         dockerfile: lts/vanilla
         image-name: node
-        tags: lts 14 14.15 14.15.4 14.15.4-buster
+        tags: lts 14 14.16 14.16.1 14.16.1-buster
         push-branches: main
 
   build_node_lts_java:
@@ -58,7 +58,33 @@ jobs:
       with:
         dockerfile: lts/java
         image-name: node
-        tags: lts-java 14-java 14.15-java 14.15.4-java 14.15.4-buster-slim-java
+        tags: lts-java 14-java 14.16-java 14.16.1-java 14.16.1-buster-slim-java
+        push-branches: main
+
+  build_node_15:
+    name: Build node 15
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build Docker Images with node
+      uses: philips-software/docker-ci-scripts@v3.2.1
+      with:
+        dockerfile: 15/vanilla
+        image-name: node
+        tags: 15 15.15 15.14.0 15.14.0-buster
+        push-branches: main
+  
+  build_node_15_java:
+    name: Build node 15 java
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build Docker Images with node and java
+      uses: philips-software/docker-ci-scripts@v3.2.1
+      with:
+        dockerfile: 15/java
+        image-name: node
+        tags: 15-java 15.15-java 15.14.0-java 15.14.0-buster-java
         push-branches: main
 
   build_node_stable:
@@ -71,7 +97,7 @@ jobs:
       with:
         dockerfile: stable/vanilla
         image-name: node
-        tags: latest stable 15 15.5 15.5.1 15.5.1-buster
+        tags: latest stable 16 16.0 16.0.0 16.0.0-buster
         push-branches: main
 
   build_node_stable_java:
@@ -84,5 +110,5 @@ jobs:
       with:
         dockerfile: stable/java
         image-name: node
-        tags: java stable-java 15-java 15.5-java 15.5.1-java 15.5.1-buster-java
+        tags: java stable-java 16-java 16.0-java 16.0.0-java 16.0.0-buster-java
         push-branches: main

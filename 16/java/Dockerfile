@@ -1,4 +1,4 @@
-FROM node:12.22.1-buster
+FROM node:16.0.0-buster
 LABEL maintainer="Forest Keepers <Jeroen.knoops@philips.com>"
 
 RUN apt-get update && \
@@ -10,6 +10,7 @@ RUN apt-get update && \
       openssl \
       bash \
       net-tools \
+      tar \
       default-jdk && \
     rm -rf /var/lib/apt/lists/*
 
