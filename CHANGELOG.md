@@ -6,6 +6,8 @@ and this project uses the version of main tool as main version number .
 
 ### Changed
 - Add 16 as stable
+- v12.22.1 / v14.16.1 / v15.14.0
+- Updated versions
 - Use buster in stead of stretch
 - lts --> 14.15.3
 - lts --> 14.15.2
