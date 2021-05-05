@@ -14,8 +14,8 @@ RUN apt-get update && \
       default-jdk && \
     rm -rf /var/lib/apt/lists/*
 
-RUN mkdir /app
-RUN chown node:node /app
+RUN mkdir /app && \
+    chown node:node /app
 
 RUN yarn global add lerna
 
