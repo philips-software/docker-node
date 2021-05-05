@@ -1,4 +1,4 @@
-FROM node:12.22.1-buster-slim
+FROM node:16.0.0-buster-slim
 LABEL maintainer="Forest Keepers <Jeroen.knoops@philips.com>"
 
 RUN apt-get update && \
@@ -9,6 +9,7 @@ RUN apt-get update && \
       wget \
       openssl \
       bash \
+      tar \
       net-tools && \
     rm -rf /var/lib/apt/lists/*
 

@@ -23,6 +23,11 @@ Current versions available:
 │   │   └── Dockerfile
 │   └── vanilla
 │       └── Dockerfile
+├── 16
+│   ├── java
+│   │   └── Dockerfile
+│   └── vanilla
+│       └── Dockerfile
 ```
 ## Usage
 
@@ -55,7 +60,7 @@ This contains all the similar tags at the point of creation.
 
 ```
 $ docker run philipssoftware/node:12 cat TAGS
-node node:stable node:12 node:12.18 node:12.18.3 node:12.18.3-stretch
+node node:stable node:12 node:12.22 node:12.22.1 node:12.22.1-stretch
 ```
 
 You can use this to pin down a version of the container from an existing development build for production. When using `node:11` for development. This ensures that you've got all security updates in your build. If you want to pin the version of your image down for production, you can use this file inside of the container to look for the most specific tag, the last one.
@@ -63,23 +68,28 @@ You can use this to pin down a version of the container from an existing develop
 ## Simple Tags
 
 ### nodeJS stable
-- `node` `node:stable` `node:15` `node:15.14` `node:15.14.0` `node:15.14.0-buster` [15/vanilla/Dockerfile](15/vanilla/Dockerfile)
+- `node` `node:stable` `node:16` `node:16.0` `node:16.0.0` `node:16.0.0-buster` [16/vanilla/Dockerfile](16/vanilla/Dockerfile)
 
 ### nodeJS lts
 - `node:lts` `node:14` `node:14.16` `node:14.16.1` `node:14.16.1-buster` [14/vanilla/Dockerfile](14/vanilla/Dockerfile)
 
-### nodeJS 12
-- `node:12` `node:12.21` `node:12.22.1` `node:12.22.1-buster-slim` [10/vanilla/Dockerfile](10/vanilla/Dockerfile)
+### nodeJS 15 - not recommended (use `stable` or `lts`)
+- `node:15` `node:15.14` `node:15.14.0` `node:15.14.0-buster-slim` [15/vanilla/Dockerfile](15/vanilla/Dockerfile)
+
+### nodeJS 12 - not recommended (use `stable` or `lts`)
+- `node:12` `node:12.22` `node:12.22.1` `node:12.22.1-buster-slim` [12/vanilla/Dockerfile](12/vanilla/Dockerfile)
 
 ### nodeJS stable with openjdk
-- `node:java` `node:stable-java` `node:15-java` `node:15.14-java` `node:15.14.1-java` `node:15.14.1-buster-java` [15/java/Dockerfile](15/java/Dockerfile)`
+- `node:java` `node:stable-java` `node:16-java` `node:16.0-java` `node:16.0.0-java` `node:16.0.0-buster-java` [16/java/Dockerfile](16/java/Dockerfile)`
 
 ### nodeJS lts with openjdk
 - `node:lts-java` `node:14-java` `node:14.16-java` `node:14.16.1-java` `node:14.16.1-buster-slim-java` [14/java/Dockerfile](14/java/Dockerfile)
 
-### nodeJS 12 with openjdk
+### nodeJS 15 with openjdk - not recommended (use `stable` or `lts`)
+- `node:15-java` `node:15.14-java` `node:15.14.0-java` `node:15.14.0-buster-slim-java` [15/java/Dockerfile](15/java/Dockerfile)
+
+### nodeJS 12 with openjdk - not recommended (use `stable` or `lts`)
 - `node:12-java` `node:12.22-java` `node:12.22.1-java` `node:12.22.1-buster-slim-java` [12/java/Dockerfile](12/java/Dockerfile)
-        
 
 ## Why
 
