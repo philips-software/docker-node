@@ -112,3 +112,20 @@ jobs:
         image-name: node
         tags: java stable-java 16-java 16.0-java 16.0.0-java 16.0.0-buster-java
         push-branches: main
+
+  test_latest_image:
+    name: Test latest image
+    runs-on: ubuntu-latest
+    container: philipssoftware/node:latest
+    if: github.ref == 'refs/heads/main'
+    needs: build_node_stable
+    steps:
+    - uses: actions/checkout@v2
+    - name: Test hello react app
+      run: |
+        npx create-react-app my-app
+        cd my-app
+        npm test
+      env:
+        CI: true
+
