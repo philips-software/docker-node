@@ -22,7 +22,7 @@ RUN yarn set version latest && \
 
 WORKDIR /app
 
-ADD REPO TAGS .
+ADD REPO TAGS /app/
 
 RUN echo '[ ! -z "$TERM" -a -r /etc/motd ] && cat /etc/motd' \
     >> /etc/bash.bashrc \
