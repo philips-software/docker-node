@@ -65,6 +65,14 @@ node node:stable node:12 node:12.22 node:12.22.1 node:12.22.1-stretch
 
 You can use this to pin down a version of the container from an existing development build for production. When using `node:11` for development. This ensures that you've got all security updates in your build. If you want to pin the version of your image down for production, you can use this file inside of the container to look for the most specific tag, the last one.
 
+### Node and Java version
+
+If you want to know the version of Node (or Java if available), you can do the following:
+
+```
+$ docker run -it philipssoftware/node:12
+```
+
 ## Simple Tags
 
 ### nodeJS stable
