@@ -1,4 +1,4 @@
-FROM node:14.17.0-buster-slim
+FROM node:14.17.1-buster-slim
 LABEL maintainer="Forest Keepers <Jeroen.knoops@philips.com>"
 
 RUN apt-get update && \
@@ -15,12 +15,23 @@ RUN apt-get update && \
 RUN mkdir /app && \
     chown node:node /app
 
-RUN yarn global add lerna
+RUN yarn set version latest && \
+    yarn global add lerna
 
 WORKDIR /app
 
-ADD REPO .
-ADD TAGS .
+ADD REPO TAGS .
+
+RUN echo '[ ! -z "$TERM" -a -r /etc/motd ] && cat /etc/motd' \
+    >> /etc/bash.bashrc \
+    ; echo "\
+----------------------------------------------------------------------------------------------\n\
+TAGS: $(cat /app/TAGS)\n\
+REPO: $(cat /app/REPO)\n\
+----------------------------------------------------------------------------------------------\n\
+NODE: $(node --version)\n\
+----------------------------------------------------------------------------------------------"\
+    > /etc/motd
 
 # Define default command.
 CMD ["/bin/bash"]

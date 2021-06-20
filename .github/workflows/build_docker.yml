@@ -19,8 +19,9 @@ jobs:
       with:
         dockerfile: 12/vanilla
         image-name: node
-        tags: 12 12.22 12.22.1 12.22.1-buster
-        push-branches: main
+          #tags: 12 12.22 12.22.1 12.22.1-buster
+        tags: 12-test
+        push-branches: main update-versions-2021-06
   
   build_node_12_java:
     name: Build node 12 java
@@ -32,8 +33,9 @@ jobs:
       with:
         dockerfile: 12/java
         image-name: node
-        tags: 12-java 12.22-java 12.22.1-java 12.22.1-buster-slim-java
-        push-branches: main
+          # tags: 12-java 12.22-java 12.22.1-java 12.22.1-buster-slim-java
+        tags: 12-java-test
+        push-branches: main update-versions-2021-06
 
   build_node_lts:
     name: Build node lts
@@ -45,8 +47,9 @@ jobs:
       with:
         dockerfile: lts/vanilla
         image-name: node
-        tags: lts 14 14.17 14.17.0 14.17.0-buster
-        push-branches: main
+          # tags: lts 14 14.17 14.17.1 14.17.1-buster
+        tags: lts-test
+        push-branches: main update-versions-2021-06
 
   build_node_lts_java:
     name: Build node lts with java
@@ -58,8 +61,9 @@ jobs:
       with:
         dockerfile: lts/java
         image-name: node
-        tags: lts-java 14-java 14.17-java 14.17.0-java 14.17.0-buster-slim-java
-        push-branches: main
+          # tags: lts-java 14-java 14.17-java 14.17.1-java 14.17.1-buster-slim-java
+        tags: lts-java-test
+        push-branches: main update-versions-2021-06
 
   build_node_15:
     name: Build node 15
@@ -71,8 +75,9 @@ jobs:
       with:
         dockerfile: 15/vanilla
         image-name: node
-        tags: 15 15.14 15.14.0 15.14.0-buster
-        push-branches: main
+          #tags: 15 15.14 15.14.0 15.14.0-buster
+        tags: 15-test
+        push-branches: main update-versions-2021-06
   
   build_node_15_java:
     name: Build node 15 java
@@ -84,8 +89,9 @@ jobs:
       with:
         dockerfile: 15/java
         image-name: node
-        tags: 15-java 15.14-java 15.14.0-java 15.14.0-buster-java
-        push-branches: main
+          # tags: 15-java 15.14-java 15.14.0-java 15.14.0-buster-java
+        tags: 15-java-test
+        push-branches: main update-versions-2021-06
 
   build_node_stable:
     name: Build node stable
@@ -97,8 +103,9 @@ jobs:
       with:
         dockerfile: stable/vanilla
         image-name: node
-        tags: latest stable 16 16.2 16.2.0 16.2.0-buster
-        push-branches: main
+          # tags: latest stable 16 16.3 16.3.0 16.3.0-buster
+        tags: 16-test
+        push-branches: main update-versions-2021-06
 
   build_node_stable_java:
     name: Build node stable with java
@@ -110,13 +117,14 @@ jobs:
       with:
         dockerfile: stable/java
         image-name: node
-        tags: java stable-java 16-java 16.2-java 16.2.0-java 16.2.0-buster-java
-        push-branches: main
+          #tags: java stable-java 16-java 16.3-java 16.3.0-java 16.3.0-buster-java
+        tags: 16-java-test
+        push-branches: main update-versions-2021-06
 
   test_latest_image:
     name: Test latest image
     runs-on: ubuntu-latest
-    container: philipssoftware/node:latest
+    container: philipssoftware/node:16-test
     if: github.ref == 'refs/heads/main'
     needs: build_node_stable
     steps:

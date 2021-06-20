@@ -16,12 +16,24 @@ RUN apt-get update && \
 RUN mkdir /app && \
     chown node:node /app
 
-RUN yarn global add lerna
+RUN yarn set version latest && \
+    yarn global add lerna
 
 WORKDIR /app
 
-ADD REPO .
-ADD TAGS .
+ADD REPO TAGS .
+
+RUN echo '[ ! -z "$TERM" -a -r /etc/motd ] && cat /etc/motd' \
+    >> /etc/bash.bashrc \
+    ; echo "\
+----------------------------------------------------------------------------------------------\n\
+TAGS: $(cat /app/TAGS)\n\
+REPO: $(cat /app/REPO)\n\
+----------------------------------------------------------------------------------------------\n\
+NODE: $(node --version)\n\
+JAVA: $(java -version 2>&1 | head -n 1 | awk -F '"' '{print $2}')\n\
+----------------------------------------------------------------------------------------------"\
+    > /etc/motd
 
 # Define default command.
 CMD ["/bin/bash"]
