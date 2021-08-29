@@ -17,7 +17,7 @@ RUN mkdir /app && \
     chown node:node /app
 
 RUN yarn set version berry && \
-    yarn global add lerna
+    npm install --g lerna
 
 WORKDIR /app
 
