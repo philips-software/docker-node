@@ -1,4 +1,4 @@
-FROM node:16.8.0-buster-slim
+FROM node:16.7.0-buster-slim
 LABEL maintainer="Forest Keepers <Jeroen.knoops@philips.com>"
 
 RUN apt-get update && \
@@ -16,7 +16,7 @@ RUN apt-get update && \
 RUN mkdir /app && \
     chown node:node /app
 
-RUN yarn set version latest && \
+RUN yarn set version berry && \
     yarn global add lerna
 
 WORKDIR /app

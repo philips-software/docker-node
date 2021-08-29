@@ -26,7 +26,9 @@ Current versions available:
 ├── 16
 │   ├── java
 │   │   └── Dockerfile
-│   └── vanilla
+│   ├── vanilla
+│   │   └── Dockerfile
+│   └── yarn2
 │       └── Dockerfile
 ```
 ## Usage
@@ -77,6 +79,9 @@ $ docker run -it philipssoftware/node:12
 
 ### nodeJS stable
 - `node` `node:stable` `node:16` `node:16.8` `node:16.8.0` `node:16.8.0-buster` [16/vanilla/Dockerfile](16/vanilla/Dockerfile)
+
+### nodeJS stable - Yarn 2
+- `node:yarn2` `node:16-yarn2` `node:16.7-yarn2` `node:16.7.0-yarn2` `node:16.7.0-buster-yarn2` [16/yarn2/Dockerfile](16/yarn2/Dockerfile)
 
 ### nodeJS lts
 - `node:lts` `node:14` `node:14.17` `node:14.17.5` `node:14.17.5-buster` [14/vanilla/Dockerfile](14/vanilla/Dockerfile)
