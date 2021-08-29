@@ -1,4 +1,4 @@
-FROM node:16.7.0-buster-slim
+FROM node:16.8.0-buster-slim
 LABEL maintainer="Forest Keepers <Jeroen.knoops@philips.com>"
 
 RUN apt-get update && \

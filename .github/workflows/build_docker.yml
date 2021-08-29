@@ -97,7 +97,7 @@ jobs:
       with:
         dockerfile: stable/vanilla
         image-name: node
-        tags: latest stable 16 16.7 16.7.0 16.7.0-buster
+        tags: latest stable 16 16.8 16.8.0 16.8.0-buster
         push-branches: main
 
   build_node_stable_java:
@@ -110,7 +110,7 @@ jobs:
       with:
         dockerfile: stable/java
         image-name: node
-        tags: java stable-java 16-java 16.7-java 16.7.0-java 16.7.0-buster-java
+        tags: java stable-java 16-java 16.8-java 16.8.0-java 16.8.0-buster-java
         push-branches: main
 
   test_latest_image:
