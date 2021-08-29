@@ -1,4 +1,4 @@
-FROM node:16.7.0-buster
+FROM node:16.7.0-buster-slim
 LABEL maintainer="Forest Keepers <Jeroen.knoops@philips.com>"
 
 RUN apt-get update && \
@@ -9,15 +9,14 @@ RUN apt-get update && \
       wget \
       openssl \
       bash \
-      net-tools \
       tar \
-      default-jdk && \
+      net-tools && \
     rm -rf /var/lib/apt/lists/*
 
 RUN mkdir /app && \
     chown node:node /app
 
-RUN yarn set version latest && \
+RUN yarn set version berry && \
     yarn global add lerna
 
 WORKDIR /app
@@ -33,7 +32,6 @@ REPO: $(cat /app/REPO)\n\
 ----------------------------------------------------------------------------------------------\n\
 NODE: $(node --version)\n\
 YARN: $(yarn --version)\n\
-JAVA: $(java -version 2>&1 | head -n 1 | awk -F '"' '{print $2}')\n\
 ----------------------------------------------------------------------------------------------"\
     > /etc/motd
 
