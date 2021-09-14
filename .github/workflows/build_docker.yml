@@ -19,7 +19,7 @@ jobs:
       with:
         dockerfile: 12/vanilla
         image-name: node
-        tags: 12 12.22 12.22.5 12.22.5-buster
+        tags: 12 12.22 12.22.6 12.22.6-buster
         push-branches: main
   
   build_node_12_java:
@@ -32,7 +32,7 @@ jobs:
       with:
         dockerfile: 12/java
         image-name: node
-        tags: 12-java 12.22-java 12.22.5-java 12.22.5-buster-slim-java
+        tags: 12-java 12.22-java 12.22.6-java 12.22.6-buster-slim-java
         push-branches: main
 
   build_node_lts:
@@ -45,7 +45,7 @@ jobs:
       with:
         dockerfile: lts/vanilla
         image-name: node
-        tags: lts 14 14.17 14.17.5 14.17.5-buster
+        tags: lts 14 14.17 14.17.6 14.17.6-buster
         push-branches: main
 
   build_node_lts_java:
@@ -58,7 +58,7 @@ jobs:
       with:
         dockerfile: lts/java
         image-name: node
-        tags: lts-java 14-java 14.17-java 14.17.5-java 14.17.5-buster-slim-java
+        tags: lts-java 14-java 14.17-java 14.17.6-java 14.17.6-buster-slim-java
         push-branches: main
 
   build_node_15:
@@ -110,7 +110,7 @@ jobs:
       with:
         dockerfile: stable/yarn2
         image-name: node
-        tags: yarn2 16-yarn2 16.7-yarn2 16.7.0-yarn2 16.7.0-buster-yarn2
+        tags: yarn2 16-yarn2 16.7-yarn2 16.9.1-yarn2 16.9.1-buster-yarn2
         push-branches: main
 
   build_node_stable_java:

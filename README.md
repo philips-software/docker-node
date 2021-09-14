@@ -81,28 +81,28 @@ $ docker run -it philipssoftware/node:12
 - `node` `node:stable` `node:16` `node:16.8` `node:16.8.0` `node:16.8.0-buster` [16/vanilla/Dockerfile](16/vanilla/Dockerfile)
 
 ### nodeJS stable - Yarn 2
-- `node:yarn2` `node:16-yarn2` `node:16.7-yarn2` `node:16.7.0-yarn2` `node:16.7.0-buster-yarn2` [16/yarn2/Dockerfile](16/yarn2/Dockerfile)
+- `node:yarn2` `node:16-yarn2` `node:16.7-yarn2` `node:16.9.1-yarn2` `node:16.9.1-buster-yarn2` [16/yarn2/Dockerfile](16/yarn2/Dockerfile)
 
 ### nodeJS lts
-- `node:lts` `node:14` `node:14.17` `node:14.17.5` `node:14.17.5-buster` [14/vanilla/Dockerfile](14/vanilla/Dockerfile)
+- `node:lts` `node:14` `node:14.17` `node:14.17.6` `node:14.17.6-buster` [14/vanilla/Dockerfile](14/vanilla/Dockerfile)
 
 ### nodeJS 15 - not recommended (use `stable` or `lts`)
 - `node:15` `node:15.14` `node:15.14.0` `node:15.14.0-buster-slim` [15/vanilla/Dockerfile](15/vanilla/Dockerfile)
 
 ### nodeJS 12 - not recommended (use `stable` or `lts`)
-- `node:12` `node:12.22` `node:12.22.5` `node:12.22.5-buster-slim` [12/vanilla/Dockerfile](12/vanilla/Dockerfile)
+- `node:12` `node:12.22` `node:12.22.6` `node:12.22.6-buster-slim` [12/vanilla/Dockerfile](12/vanilla/Dockerfile)
 
 ### nodeJS stable with openjdk
 - `node:java` `node:stable-java` `node:16-java` `node:16.8-java` `node:16.8.2-java` `node:16.8.2-buster-java` [16/java/Dockerfile](16/java/Dockerfile)`
 
 ### nodeJS lts with openjdk
-- `node:lts-java` `node:14-java` `node:14.17-java` `node:14.17.5-java` `node:14.17.5-buster-slim-java` [14/java/Dockerfile](14/java/Dockerfile)
+- `node:lts-java` `node:14-java` `node:14.17-java` `node:14.17.6-java` `node:14.17.6-buster-slim-java` [14/java/Dockerfile](14/java/Dockerfile)
 
 ### nodeJS 15 with openjdk - not recommended (use `stable` or `lts`)
 - `node:15-java` `node:15.14-java` `node:15.14.0-java` `node:15.14.0-buster-slim-java` [15/java/Dockerfile](15/java/Dockerfile)
 
 ### nodeJS 12 with openjdk - not recommended (use `stable` or `lts`)
-- `node:12-java` `node:12.22-java` `node:12.22.5-java` `node:12.22.5-buster-slim-java` [12/java/Dockerfile](12/java/Dockerfile)
+- `node:12-java` `node:12.22-java` `node:12.22.6-java` `node:12.22.6-buster-slim-java` [12/java/Dockerfile](12/java/Dockerfile)
 
 ## Why
 
