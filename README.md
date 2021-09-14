@@ -78,10 +78,10 @@ $ docker run -it philipssoftware/node:12
 ## Simple Tags
 
 ### nodeJS stable
-- `node` `node:stable` `node:16` `node:16.8` `node:16.8.0` `node:16.8.0-buster` [16/vanilla/Dockerfile](16/vanilla/Dockerfile)
+- `node` `node:stable` `node:16` `node:16.9` `node:16.9.1` `node:16.9.1-buster` [16/vanilla/Dockerfile](16/vanilla/Dockerfile)
 
 ### nodeJS stable - Yarn 2
-- `node:yarn2` `node:16-yarn2` `node:16.7-yarn2` `node:16.9.1-yarn2` `node:16.9.1-buster-yarn2` [16/yarn2/Dockerfile](16/yarn2/Dockerfile)
+- `node:yarn2` `node:16-yarn2` `node:16.9-yarn2` `node:16.9.1-yarn2` `node:16.9.1-buster-yarn2` [16/yarn2/Dockerfile](16/yarn2/Dockerfile)
 
 ### nodeJS lts
 - `node:lts` `node:14` `node:14.17` `node:14.17.6` `node:14.17.6-buster` [14/vanilla/Dockerfile](14/vanilla/Dockerfile)
@@ -93,7 +93,7 @@ $ docker run -it philipssoftware/node:12
 - `node:12` `node:12.22` `node:12.22.6` `node:12.22.6-buster-slim` [12/vanilla/Dockerfile](12/vanilla/Dockerfile)
 
 ### nodeJS stable with openjdk
-- `node:java` `node:stable-java` `node:16-java` `node:16.8-java` `node:16.8.2-java` `node:16.8.2-buster-java` [16/java/Dockerfile](16/java/Dockerfile)`
+- `node:java` `node:stable-java` `node:16-java` `node:16.9-java` `node:16.9.1-java` `node:16.9.1-buster-java` [16/java/Dockerfile](16/java/Dockerfile)`
 
 ### nodeJS lts with openjdk
 - `node:lts-java` `node:14-java` `node:14.17-java` `node:14.17.6-java` `node:14.17.6-buster-slim-java` [14/java/Dockerfile](14/java/Dockerfile)
