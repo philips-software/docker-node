@@ -17,9 +17,9 @@ RUN apt-get update && \
 RUN mkdir /app && \
     chown node:node /app
 
-RUN yarn set version 3.1.0 && \
-    yarn global add lerna && \
-    export NODE_OPTIONS='--openssl-legacy-provider'
+RUN yarn global add lerna
+
+ENV NODE_OPTIONS='--openssl-legacy-provider'
 
 WORKDIR /app
 

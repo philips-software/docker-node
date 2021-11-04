@@ -17,8 +17,9 @@ RUN mkdir /app && \
     chown node:node /app
 
 RUN yarn set version 3.1.0 && \
-    npm install --g lerna && \
-    export NODE_OPTIONS='--openssl-legacy-provider'
+    npm install --g lerna
+
+ENV NODE_OPTIONS='--openssl-legacy-provider'
 
 WORKDIR /app
 
