@@ -6,6 +6,7 @@ and this project uses the version of main tool as main version number .
 
 ### Changed
 
+- Currently 17.0.1 is supposed to be the Stable version of Node, but due to an error in OpenSSL 3.x we cannot use it together with the GitHub checkout action. Therefore we've pointed Stable to LTS in order to not break the latest version of the node image.
 - v12.22.7 / v14.18.1 / v16.13.0 (LTS) / v17.0.1 (Stable)
 - v12.22.6 / v14.17.6 / v15.14.0 / v16.9.1
 - Add yarn2 version 

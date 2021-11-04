@@ -62,7 +62,7 @@ jobs:
         push-branches: main
 
   build_node_lts:
-    name: Build node lts
+    name: Build node lts stable
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2.4.0
@@ -71,11 +71,11 @@ jobs:
       with:
         dockerfile: lts/vanilla
         image-name: node
-        tags: lts 16 16.13 16.13.0 16.13.0-buster
+        tags: latest stable lts 16 16.13 16.13.0 16.13.0-buster
         push-branches: main
   
   build_node_lts_yarn2:
-    name: Build node lts java
+    name: Build node lts stable java
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2.4.0
@@ -84,11 +84,11 @@ jobs:
       with:
         dockerfile: lts/yarn2
         image-name: node
-        tags: lts-yarn2 16-yarn2 16.13-yarn2 16.13.0-yarn2 16.13.0-buster-yarn2
+        tags: yarn2 stable-yarn2 lts-yarn2 16-yarn2 16.13-yarn2 16.13.0-yarn2 16.13.0-buster-yarn2
         push-branches: main
 
   build_node_lts_java:
-    name: Build node lts java
+    name: Build node lts stable java
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2.4.0
@@ -97,20 +97,20 @@ jobs:
       with:
         dockerfile: lts/java
         image-name: node
-        tags: lts-java 16-java 16.13-java 16.13.0-java 16.13.0-buster-java
+        tags: java stable-java lts-java 16-java 16.13-java 16.13.0-java 16.13.0-buster-java
         push-branches: main
 
-  build_node_stable:
-    name: Build node stable
+  build_node_17:
+    name: Build node 17
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2.4.0
     - name: Build Docker Images with node
       uses: philips-software/docker-ci-scripts@v3.3.2
       with:
-        dockerfile: stable/vanilla
+        dockerfile: 17/vanilla
         image-name: node
-        tags: latest stable 17 17.0 17.0.1 17.0.1-buster
+        tags: 17 17.0 17.0.1 17.0.1-buster
         push-branches: main
 
   build_node_stable_yarn2:
@@ -121,9 +121,9 @@ jobs:
     - name: Build Docker Images with node
       uses: philips-software/docker-ci-scripts@v3.3.2
       with:
-        dockerfile: stable/yarn2
+        dockerfile: 17/yarn2
         image-name: node
-        tags: yarn2 stable-yarn2 17-yarn2 17.0-yarn2 17.0.1-yarn2 17.0.1-buster-yarn2
+        tags: 17-yarn2 17.0-yarn2 17.0.1-yarn2 17.0.1-buster-yarn2
         push-branches: main
 
   build_node_stable_java:
@@ -134,9 +134,9 @@ jobs:
     - name: Build Docker Images with node
       uses: philips-software/docker-ci-scripts@v3.3.2
       with:
-        dockerfile: stable/java
+        dockerfile: 17/java
         image-name: node
-        tags: java stable-java 17-java 17.0-java 17.0.1-java 17.0.1-buster-java
+        tags: 17-java 17.0-java 17.0.1-java 17.0.1-buster-java
         push-branches: main
 
   test_latest_image:
