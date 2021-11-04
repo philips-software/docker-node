@@ -113,8 +113,8 @@ jobs:
         tags: 17 17.0 17.0.1 17.0.1-buster
         push-branches: main
 
-  build_node_stable_yarn2:
-    name: Build node with yarn 2
+  build_node_17_yarn2:
+    name: Build node 17 with yarn 2
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2.4.0
@@ -126,8 +126,8 @@ jobs:
         tags: 17-yarn2 17.0-yarn2 17.0.1-yarn2 17.0.1-buster-yarn2
         push-branches: main
 
-  build_node_stable_java:
-    name: Build node stable with java
+  build_node_17_java:
+    name: Build node 1 with java
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2.4.0
