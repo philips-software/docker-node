@@ -16,8 +16,9 @@ RUN apt-get update && \
 RUN mkdir /app && \
     chown node:node /app
 
-RUN yarn set version berry && \
-    npm install --g lerna
+RUN yarn set version 3.1.0 && \
+    npm install --g lerna && \
+    export NODE_OPTIONS='--openssl-legacy-provider'
 
 WORKDIR /app
 

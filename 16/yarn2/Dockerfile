@@ -16,7 +16,7 @@ RUN apt-get update && \
 RUN mkdir /app && \
     chown node:node /app
 
-RUN yarn set version berry && \
+RUN yarn set version 3.1.0 && \
     npm install --g lerna
 
 WORKDIR /app
