@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project uses the version of main tool as main version number .
 
 ### Changed
+
+- v12.22.7 / v14.18.1 / v16.13.0 (LTS) / v17.0.1 (Stable)
 - v12.22.6 / v14.17.6 / v15.14.0 / v16.9.1
 - Add yarn2 version 
 - v12.22.5 / v14.17.5 / v15.14.0 / v16.7.0
