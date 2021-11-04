@@ -1,4 +1,4 @@
-FROM node:16.9.1-buster-slim
+FROM node:16.13.0-buster-slim
 LABEL maintainer="Forest Keepers <Jeroen.knoops@philips.com>"
 
 RUN apt-get update && \
@@ -16,7 +16,7 @@ RUN apt-get update && \
 RUN mkdir /app && \
     chown node:node /app
 
-RUN yarn set version berry && \
+RUN yarn set version 3.1.0 && \
     npm install --g lerna
 
 WORKDIR /app

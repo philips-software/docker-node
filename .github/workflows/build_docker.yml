@@ -19,7 +19,7 @@ jobs:
       with:
         dockerfile: 12/vanilla
         image-name: node
-        tags: 12 12.22 12.22.6 12.22.6-buster
+        tags: 12 12.22 12.22.7 12.22.7-buster
         push-branches: main
   
   build_node_12_java:
@@ -32,7 +32,33 @@ jobs:
       with:
         dockerfile: 12/java
         image-name: node
-        tags: 12-java 12.22-java 12.22.6-java 12.22.6-buster-slim-java
+        tags: 12-java 12.22-java 12.22.7-java 12.22.7-buster-slim-java
+        push-branches: main
+
+  build_node_14:
+    name: Build node 14
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2.4.0
+    - name: Build Docker Images with node
+      uses: philips-software/docker-ci-scripts@v3.3.2
+      with:
+        dockerfile: 14/vanilla
+        image-name: node
+        tags: 14 14.18 14.18.1 14.18.1-buster
+        push-branches: main
+
+  build_node_14_java:
+    name: Build node 14 with java
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2.4.0
+    - name: Build Docker Images with node
+      uses: philips-software/docker-ci-scripts@v3.3.2
+      with:
+        dockerfile: 14/java
+        image-name: node
+        tags: 14-java 14.18-java 14.18.1-java 14.18.1-buster-slim-java
         push-branches: main
 
   build_node_lts:
@@ -45,46 +71,33 @@ jobs:
       with:
         dockerfile: lts/vanilla
         image-name: node
-        tags: lts 14 14.17 14.17.6 14.17.6-buster
-        push-branches: main
-
-  build_node_lts_java:
-    name: Build node lts with java
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2.4.0
-    - name: Build Docker Images with node
-      uses: philips-software/docker-ci-scripts@v3.3.2
-      with:
-        dockerfile: lts/java
-        image-name: node
-        tags: lts-java 14-java 14.17-java 14.17.6-java 14.17.6-buster-slim-java
-        push-branches: main
-
-  build_node_15:
-    name: Build node 15
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2.4.0
-    - name: Build Docker Images with node
-      uses: philips-software/docker-ci-scripts@v3.3.2
-      with:
-        dockerfile: 15/vanilla
-        image-name: node
-        tags: 15 15.14 15.14.0 15.14.0-buster
+        tags: lts 16 16.13 16.13.0 16.13.0-buster
         push-branches: main
   
-  build_node_15_java:
-    name: Build node 15 java
+  build_node_lts_yarn2:
+    name: Build node lts java
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2.4.0
     - name: Build Docker Images with node and java
       uses: philips-software/docker-ci-scripts@v3.3.2
       with:
-        dockerfile: 15/java
+        dockerfile: lts/yarn2
         image-name: node
-        tags: 15-java 15.14-java 15.14.0-java 15.14.0-buster-java
+        tags: lts-yarn2 16-yarn2 16.13-yarn2 16.13.0-yarn2 16.13.0-buster-yarn2
+        push-branches: main
+
+  build_node_lts_java:
+    name: Build node lts java
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2.4.0
+    - name: Build Docker Images with node and java
+      uses: philips-software/docker-ci-scripts@v3.3.2
+      with:
+        dockerfile: lts/java
+        image-name: node
+        tags: lts-java 16-java 16.13-java 16.13.0-java 16.13.0-buster-java
         push-branches: main
 
   build_node_stable:
@@ -97,10 +110,10 @@ jobs:
       with:
         dockerfile: stable/vanilla
         image-name: node
-        tags: latest stable 16 16.9 16.9.1 16.9.1-buster
+        tags: latest stable 17 17.0 17.0.1 17.0.1-buster
         push-branches: main
 
-  build_node_yarn2:
+  build_node_stable_yarn2:
     name: Build node with yarn 2
     runs-on: ubuntu-latest
     steps:
@@ -110,7 +123,7 @@ jobs:
       with:
         dockerfile: stable/yarn2
         image-name: node
-        tags: yarn2 16-yarn2 16.9-yarn2 16.9.1-yarn2 16.9.1-buster-yarn2
+        tags: yarn2 stable-yarn2 17-yarn2 17.0-yarn2 17.0.1-yarn2 17.0.1-buster-yarn2
         push-branches: main
 
   build_node_stable_java:
@@ -123,7 +136,7 @@ jobs:
       with:
         dockerfile: stable/java
         image-name: node
-        tags: java stable-java 16-java 16.9-java 16.9.1-java 16.9.1-buster-java
+        tags: java stable-java 17-java 17.0-java 17.0.1-java 17.0.1-buster-java
         push-branches: main
 
   test_latest_image:
