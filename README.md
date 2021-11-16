@@ -83,11 +83,11 @@ Currently 17.0.1 is supposed to be the Stable version of Node, but due to an err
 
 ## Simple Tags
 
-### nodeJS 17 
-- `node:17` `node:17.0` `node:17.0.1` `node:17.0.1-buster` [17/vanilla/Dockerfile](17/vanilla/Dockerfile)
-
 ### nodeJS lts / stable
 - `node` `node:stable` `node:lts` `node:16` `node:16.13` `node:16.13.0` `node:16.13.0-buster` [lts/vanilla/Dockerfile](lts/vanilla/Dockerfile)
+
+### nodeJS current
+- `current` `node:17` `node:17.1` `node:17.1.0` `node:17.1.0-buster` [current/vanilla/Dockerfile](current/vanilla/Dockerfile)
 
 ### nodeJS 14 - not recommended (use `stable` or `lts`)
 - `node:14` `node:14.18` `node:14.18.1` `node:14.18.1-buster-slim` [14/vanilla/Dockerfile](14/vanilla/Dockerfile)
@@ -97,19 +97,19 @@ Currently 17.0.1 is supposed to be the Stable version of Node, but due to an err
 
 ## Tags with yarn2
 
-### nodeJS 17 - Yarn 2
--  `node:17-yarn2` `node:17.0-yarn2` `node:17.0.1-yarn2` `node:17.0.1-buster-yarn2` [17/yarn2/Dockerfile](17/yarn2/Dockerfile)
-
 ### nodeJS lts / stable - Yarn 2
 - `node:yarn2` `node:stable-yarn2` `node:lts-yarn2` `node:16-yarn2` `node:16.13-yarn2` `node:16.13.0-yarn2` `node:16.13.0-buster-yarn2` [lts/yarn2/Dockerfile](lts/yarn2/Dockerfile)
 
+### nodeJS current - Yarn 2
+-  `node:current-yarn2` `node:17-yarn2` `node:17.1-yarn2` `node:17.1.0-yarn2` `node:17.1.0-buster-yarn2` [current/yarn2/Dockerfile](current/yarn2/Dockerfile)
+
 ## Tags with openjdk
 
-### nodeJS 17 with openjdk
-- `node:17-java` `node:17.0-java` `node:17.0.1-java` `node:17.0.1-buster-java` [17/java/Dockerfile](17/java/Dockerfile)`
-
-### nodeJS lts with openjdk
+### nodeJS lts / stable with openjdk
 - `node:java` `node:stable-java` `node:lts-java` `node:16-java` `node:16.13-java` `node:16.13.0-java` `node:16.13.0-buster-java` [lts/java/Dockerfile](lts/java/Dockerfile)`
+
+### nodeJS current with openjdk
+- `node:current-java` `node:17-java` `node:17.1-java` `node:17.1.0-java` `node:17.1.0-buster-java` [current/java/Dockerfile](current/java/Dockerfile)`
 
 ### nodeJS 14 with openjdk - not recommended (use `stable` or `lts`)
 - `node:14-java` `node:14.18-java` `node:14.18.1-java` `node:14.18.1-buster-slim-java` [14/java/Dockerfile](14/java/Dockerfile)

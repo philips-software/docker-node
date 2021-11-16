@@ -108,9 +108,9 @@ jobs:
     - name: Build Docker Images with node
       uses: philips-software/docker-ci-scripts@v3.3.2
       with:
-        dockerfile: 17/vanilla
+        dockerfile: current/vanilla
         image-name: node
-        tags: 17 17.0 17.0.1 17.0.1-buster
+        tags: current 17 17.1 17.1.0 17.1.0-buster
         push-branches: main
 
   build_node_17_yarn2:
@@ -121,9 +121,9 @@ jobs:
     - name: Build Docker Images with node
       uses: philips-software/docker-ci-scripts@v3.3.2
       with:
-        dockerfile: 17/yarn2
+        dockerfile: current/yarn2
         image-name: node
-        tags: 17-yarn2 17.0-yarn2 17.0.1-yarn2 17.0.1-buster-yarn2
+        tags: current-yarn2 17-yarn2 17.1-yarn2 17.1.0-yarn2 17.1.0-buster-yarn2
         push-branches: main
 
   build_node_17_java:
@@ -134,9 +134,9 @@ jobs:
     - name: Build Docker Images with node
       uses: philips-software/docker-ci-scripts@v3.3.2
       with:
-        dockerfile: 17/java
+        dockerfile: current/java
         image-name: node
-        tags: 17-java 17.0-java 17.0.1-java 17.0.1-buster-java
+        tags: current-java 17-java 17.1-java 17.1.0-java 17.1.0-buster-java
         push-branches: main
 
   test_latest_image:
@@ -144,7 +144,7 @@ jobs:
     runs-on: ubuntu-latest
     container: philipssoftware/node:latest
     if: github.ref == 'refs/heads/main'
-    needs: build_node_17
+    needs: build_node_lts
     steps:
     - name: Test hello react app
       run: |
@@ -153,4 +153,3 @@ jobs:
         npm test
       env:
         CI: true
-
