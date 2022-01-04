@@ -19,7 +19,7 @@ jobs:
       with:
         dockerfile: 12/vanilla
         image-name: node
-        tags: 12 12.22 12.22.7 12.22.7-buster
+        tags: 12 12.22 12.22.8 12.22.8-buster
         push-branches: main
   
   build_node_12_java:
@@ -32,7 +32,7 @@ jobs:
       with:
         dockerfile: 12/java
         image-name: node
-        tags: 12-java 12.22-java 12.22.7-java 12.22.7-buster-slim-java
+        tags: 12-java 12.22-java 12.22.8-java 12.22.8-buster-slim-java
         push-branches: main
 
   build_node_14:
@@ -45,7 +45,7 @@ jobs:
       with:
         dockerfile: 14/vanilla
         image-name: node
-        tags: 14 14.18 14.18.1 14.18.1-buster
+        tags: 14 14.18 14.18.2 14.18.2-buster
         push-branches: main
 
   build_node_14_java:
@@ -58,7 +58,7 @@ jobs:
       with:
         dockerfile: 14/java
         image-name: node
-        tags: 14-java 14.18-java 14.18.1-java 14.18.1-buster-slim-java
+        tags: 14-java 14.18-java 14.18.2-java 14.18.2-buster-slim-java
         push-branches: main
 
   build_node_lts:
@@ -71,7 +71,7 @@ jobs:
       with:
         dockerfile: lts/vanilla
         image-name: node
-        tags: latest stable lts 16 16.13 16.13.0 16.13.0-buster
+        tags: latest stable lts 16 16.13 16.13.1 16.13.1-buster
         push-branches: main
   
   build_node_lts_yarn2:
@@ -84,7 +84,7 @@ jobs:
       with:
         dockerfile: lts/yarn2
         image-name: node
-        tags: yarn2 stable-yarn2 lts-yarn2 16-yarn2 16.13-yarn2 16.13.0-yarn2 16.13.0-buster-yarn2
+        tags: yarn2 stable-yarn2 lts-yarn2 16-yarn2 16.13-yarn2 16.13.1-yarn2 16.13.1-buster-yarn2
         push-branches: main
 
   build_node_lts_java:
@@ -97,7 +97,7 @@ jobs:
       with:
         dockerfile: lts/java
         image-name: node
-        tags: java stable-java lts-java 16-java 16.13-java 16.13.0-java 16.13.0-buster-java
+        tags: java stable-java lts-java 16-java 16.13-java 16.13.1-java 16.13.1-buster-java
         push-branches: main
 
   build_node_17:
@@ -110,7 +110,7 @@ jobs:
       with:
         dockerfile: current/vanilla
         image-name: node
-        tags: current 17 17.1 17.1.0 17.1.0-buster
+        tags: current 17 17.3 17.3.0 17.3.0-buster
         push-branches: main
 
   build_node_17_yarn2:
@@ -123,7 +123,7 @@ jobs:
       with:
         dockerfile: current/yarn2
         image-name: node
-        tags: current-yarn2 17-yarn2 17.1-yarn2 17.1.0-yarn2 17.1.0-buster-yarn2
+        tags: current-yarn2 17-yarn2 17.3-yarn2 17.3.0-yarn2 17.3.0-buster-yarn2
         push-branches: main
 
   build_node_17_java:
@@ -136,7 +136,7 @@ jobs:
       with:
         dockerfile: current/java
         image-name: node
-        tags: current-java 17-java 17.1-java 17.1.0-java 17.1.0-buster-java
+        tags: current-java 17-java 17.3-java 17.3.0-java 17.3.0-buster-java
         push-branches: main
 
   test_latest_image:
