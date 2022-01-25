@@ -9,142 +9,56 @@ env:
   GITHUB_ORGANIZATION: philips-software
 
 jobs:
-  build_node_12:
-    name: Build node 12
+  build_node:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - name: Build node 12
+            dockerfile: 12/vanilla
+            tags: 12 12.22 12.22.8 12.22.8-buster
+          - name: Build node 12 java
+            dockerfile: 12/java
+            tags: 12-java 12.22-java 12.22.8-java 12.22.8-buster-slim-java
+          - name: Build node 14
+            dockerfile: 14/vanilla
+            tags: 14 14.18 14.18.2 14.18.2-buster
+          - name: Build node 14 with java
+            dockerfile: 14/java
+            tags: 14-java 14.18-java 14.18.2-java 14.18.2-buster-slim-java
+          - name: Build node lts stable
+            dockerfile: lts/vanilla
+            tags: latest stable lts 16 16.13 16.13.1 16.13.1-buster
+          - name: Build node lts stable yarn 2 
+            dockerfile: lts/yarn2
+            tags: yarn2 stable-yarn2 lts-yarn2 16-yarn2 16.13-yarn2 16.13.1-yarn2 16.13.1-buster-yarn2
+          - name: Build node lts stable java
+            dockerfile: lts/java
+            tags: java stable-java lts-java 16-java 16.13-java 16.13.1-java 16.13.1-buster-java
+          - name: Build node 17
+            dockerfile: current/vanilla
+            tags: current 17 17.3 17.3.0 17.3.0-buster
+          - name: Build node 17 with yarn 2
+            dockerfile: current/yarn2
+            tags: current-yarn2 17-yarn2 17.3-yarn2 17.3.0-yarn2 17.3.0-buster-yarn2
+          - name: Build node 17 with java
+            dockerfile: current/java
+            tags: current-java 17-java 17.3-java 17.3.0-java 17.3.0-buster-java
     steps:
-    - uses: actions/checkout@v2.4.0
-    - name: Build Docker Images with node
-      uses: philips-software/docker-ci-scripts@v3.3.2
-      with:
-        dockerfile: 12/vanilla
-        image-name: node
-        tags: 12 12.22 12.22.8 12.22.8-buster
-        push-branches: main
-  
-  build_node_12_java:
-    name: Build node 12 java
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2.4.0
-    - name: Build Docker Images with node and java
-      uses: philips-software/docker-ci-scripts@v3.3.2
-      with:
-        dockerfile: 12/java
-        image-name: node
-        tags: 12-java 12.22-java 12.22.8-java 12.22.8-buster-slim-java
-        push-branches: main
-
-  build_node_14:
-    name: Build node 14
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2.4.0
-    - name: Build Docker Images with node
-      uses: philips-software/docker-ci-scripts@v3.3.2
-      with:
-        dockerfile: 14/vanilla
-        image-name: node
-        tags: 14 14.18 14.18.2 14.18.2-buster
-        push-branches: main
-
-  build_node_14_java:
-    name: Build node 14 with java
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2.4.0
-    - name: Build Docker Images with node
-      uses: philips-software/docker-ci-scripts@v3.3.2
-      with:
-        dockerfile: 14/java
-        image-name: node
-        tags: 14-java 14.18-java 14.18.2-java 14.18.2-buster-slim-java
-        push-branches: main
-
-  build_node_lts:
-    name: Build node lts stable
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2.4.0
-    - name: Build Docker Images with node
-      uses: philips-software/docker-ci-scripts@v3.3.2
-      with:
-        dockerfile: lts/vanilla
-        image-name: node
-        tags: latest stable lts 16 16.13 16.13.1 16.13.1-buster
-        push-branches: main
-  
-  build_node_lts_yarn2:
-    name: Build node lts stable java
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2.4.0
-    - name: Build Docker Images with node and java
-      uses: philips-software/docker-ci-scripts@v3.3.2
-      with:
-        dockerfile: lts/yarn2
-        image-name: node
-        tags: yarn2 stable-yarn2 lts-yarn2 16-yarn2 16.13-yarn2 16.13.1-yarn2 16.13.1-buster-yarn2
-        push-branches: main
-
-  build_node_lts_java:
-    name: Build node lts stable java
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2.4.0
-    - name: Build Docker Images with node and java
-      uses: philips-software/docker-ci-scripts@v3.3.2
-      with:
-        dockerfile: lts/java
-        image-name: node
-        tags: java stable-java lts-java 16-java 16.13-java 16.13.1-java 16.13.1-buster-java
-        push-branches: main
-
-  build_node_17:
-    name: Build node 17
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2.4.0
-    - name: Build Docker Images with node
-      uses: philips-software/docker-ci-scripts@v3.3.2
-      with:
-        dockerfile: current/vanilla
-        image-name: node
-        tags: current 17 17.3 17.3.0 17.3.0-buster
-        push-branches: main
-
-  build_node_17_yarn2:
-    name: Build node 17 with yarn 2
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2.4.0
-    - name: Build Docker Images with node
-      uses: philips-software/docker-ci-scripts@v3.3.2
-      with:
-        dockerfile: current/yarn2
-        image-name: node
-        tags: current-yarn2 17-yarn2 17.3-yarn2 17.3.0-yarn2 17.3.0-buster-yarn2
-        push-branches: main
-
-  build_node_17_java:
-    name: Build node 1 with java
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2.4.0
-    - name: Build Docker Images with node
-      uses: philips-software/docker-ci-scripts@v3.3.2
-      with:
-        dockerfile: current/java
-        image-name: node
-        tags: current-java 17-java 17.3-java 17.3.0-java 17.3.0-buster-java
-        push-branches: main
+      - uses: actions/checkout@v2.4.0
+      - name: ${{ matrix.name }}
+        uses: philips-software/docker-ci-scripts@v3.3.2
+        with:
+          dockerfile: ${{ matrix.dockerfile }}
+          image-name: node
+          tags: ${{ matrix.tags }}
 
   test_latest_image:
     name: Test latest image
     runs-on: ubuntu-latest
     container: philipssoftware/node:latest
     if: github.ref == 'refs/heads/main'
-    needs: build_node_lts
+    needs: build_node
     steps:
     - name: Test hello react app
       run: |
