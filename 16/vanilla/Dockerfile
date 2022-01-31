@@ -13,8 +13,7 @@ RUN apt-get update && \
       net-tools && \
     rm -rf /var/lib/apt/lists/*
 
-RUN mkdir /app && \
-    chown node:node /app
+RUN mkdir /app
 
 RUN yarn global add lerna
 
