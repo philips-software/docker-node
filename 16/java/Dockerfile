@@ -14,8 +14,7 @@ RUN apt-get update && \
       default-jdk && \
     rm -rf /var/lib/apt/lists/*
 
-RUN mkdir /app && \
-    chown node:node /app
+RUN mkdir /app
 
 RUN yarn set version latest && \
     yarn global add lerna
@@ -32,6 +31,7 @@ TAGS: $(cat /app/TAGS)\n\
 REPO: $(cat /app/REPO)\n\
 ----------------------------------------------------------------------------------------------\n\
 NODE: $(node --version)\n\
+NPM: $(npm --version)\n\
 YARN: $(yarn --version)\n\
 JAVA: $(java -version 2>&1 | head -n 1 | awk -F '"' '{print $2}')\n\
 ----------------------------------------------------------------------------------------------"\

@@ -47,7 +47,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2.4.0
       - name: ${{ matrix.name }}
-        uses: philips-software/docker-ci-scripts@v3.3.2
+        uses: philips-software/docker-ci-scripts@v4.4.1
         with:
           dockerfile: ${{ matrix.dockerfile }}
           image-name: node

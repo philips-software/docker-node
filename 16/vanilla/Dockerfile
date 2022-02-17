@@ -13,8 +13,7 @@ RUN apt-get update && \
       net-tools && \
     rm -rf /var/lib/apt/lists/*
 
-RUN mkdir /app && \
-    chown node:node /app
+RUN mkdir /app
 
 RUN yarn global add lerna
 
@@ -30,6 +29,7 @@ TAGS: $(cat /app/TAGS)\n\
 REPO: $(cat /app/REPO)\n\
 ----------------------------------------------------------------------------------------------\n\
 NODE: $(node --version)\n\
+NPM: $(npm --version)\n\
 YARN: $(yarn --version)\n\
 ----------------------------------------------------------------------------------------------"\
     > /etc/motd
