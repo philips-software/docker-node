@@ -7,6 +7,9 @@ env:
   DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
   DOCKER_ORGANIZATION: philipssoftware
   GITHUB_ORGANIZATION: philips-software
+  COSIGN_PRIVATE_KEY: '${{ secrets.COSIGN_PRIVATE_KEY }}'
+  COSIGN_PASSWORD: '${{ secrets.COSIGN_PASSWORD }}'
+  COSIGN_PUBLIC_KEY: '${{ secrets.COSIGN_PUBLIC_KEY }}'
 
 jobs:
   build_node:
@@ -52,6 +55,9 @@ jobs:
           dockerfile: ${{ matrix.dockerfile }}
           image-name: node
           tags: ${{ matrix.tags }}
+          sign: true
+          slsa-provenance: true
+          sbom: true
 
   test_latest_image:
     name: Test latest image
