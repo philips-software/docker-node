@@ -84,38 +84,38 @@ Currently 17.0.1 is supposed to be the Stable version of Node, but due to an err
 ## Simple Tags
 
 ### nodeJS lts / stable
-- `node` `node:stable` `node:lts` `node:16` `node:16.13` `node:16.13.1` `node:16.13.1-buster` [lts/vanilla/Dockerfile](lts/vanilla/Dockerfile)
+- `node` `node:stable` `node:lts` `node:16` `node:16.14` `node:16.14.0` `node:16.14.0-buster` [lts/vanilla/Dockerfile](lts/vanilla/Dockerfile)
 
 ### nodeJS current
-- `current` `node:17` `node:17.3` `node:17.3.0` `node:17.3.0-buster` [current/vanilla/Dockerfile](current/vanilla/Dockerfile)
+- `current` `node:17` `node:17.6` `node:17.6.0` `node:17.6.0-buster` [current/vanilla/Dockerfile](current/vanilla/Dockerfile)
 
 ### nodeJS 14 - not recommended (use `stable` or `lts`)
-- `node:14` `node:14.18` `node:14.18.2` `node:14.18.2-buster-slim` [14/vanilla/Dockerfile](14/vanilla/Dockerfile)
+- `node:14` `node:14.19` `node:14.19.0` `node:14.19.0-buster-slim` [14/vanilla/Dockerfile](14/vanilla/Dockerfile)
 
 ### nodeJS 12 - not recommended (use `stable` or `lts`)
-- `node:12` `node:12.22` `node:12.22.8` `node:12.22.8-buster-slim` [12/vanilla/Dockerfile](12/vanilla/Dockerfile)
+- `node:12` `node:12.22` `node:12.22.10` `node:12.22.10-buster-slim` [12/vanilla/Dockerfile](12/vanilla/Dockerfile)
 
 ## Tags with yarn2
 
 ### nodeJS lts / stable - Yarn 2
-- `node:yarn2` `node:stable-yarn2` `node:lts-yarn2` `node:16-yarn2` `node:16.13-yarn2` `node:16.13.1-yarn2` `node:16.13.1-buster-yarn2` [lts/yarn2/Dockerfile](lts/yarn2/Dockerfile)
+- `node:yarn2` `node:stable-yarn2` `node:lts-yarn2` `node:16-yarn2` `node:16.14-yarn2` `node:16.14.0-yarn2` `node:16.14.0-buster-yarn2` [lts/yarn2/Dockerfile](lts/yarn2/Dockerfile)
 
 ### nodeJS current - Yarn 2
--  `node:current-yarn2` `node:17-yarn2` `node:17.3-yarn2` `node:17.3.0-yarn2` `node:17.3.0-buster-yarn2` [current/yarn2/Dockerfile](current/yarn2/Dockerfile)
+-  `node:current-yarn2` `node:17-yarn2` `node:17.6-yarn2` `node:17.6.0-yarn2` `node:17.6.0-buster-yarn2` [current/yarn2/Dockerfile](current/yarn2/Dockerfile)
 
 ## Tags with openjdk
 
 ### nodeJS lts / stable with openjdk
-- `node:java` `node:stable-java` `node:lts-java` `node:16-java` `node:16.13-java` `node:16.13.1-java` `node:16.13.1-buster-java` [lts/java/Dockerfile](lts/java/Dockerfile)`
+- `node:java` `node:stable-java` `node:lts-java` `node:16-java` `node:16.14-java` `node:16.14.0-java` `node:16.14.0-buster-java` [lts/java/Dockerfile](lts/java/Dockerfile)`
 
 ### nodeJS current with openjdk
-- `node:current-java` `node:17-java` `node:17.3-java` `node:17.3.0-java` `node:17.3.0-buster-java` [current/java/Dockerfile](current/java/Dockerfile)`
+- `node:current-java` `node:17-java` `node:17.6-java` `node:17.6.0-java` `node:17.6.0-buster-java` [current/java/Dockerfile](current/java/Dockerfile)`
 
 ### nodeJS 14 with openjdk - not recommended (use `stable` or `lts`)
-- `node:14-java` `node:14.18-java` `node:14.18.2-java` `node:14.18.2-buster-slim-java` [14/java/Dockerfile](14/java/Dockerfile)
+- `node:14-java` `node:14.19-java` `node:14.19.0-java` `node:14.19.0-buster-slim-java` [14/java/Dockerfile](14/java/Dockerfile)
 
 ### nodeJS 12 with openjdk - not recommended (use `stable` or `lts`)
-- `node:12-java` `node:12.22-java` `node:12.22.8-java` `node:12.22.8-buster-slim-java` [12/java/Dockerfile](12/java/Dockerfile)
+- `node:12-java` `node:12.22-java` `node:12.22.10-java` `node:12.22.10-buster-slim-java` [12/java/Dockerfile](12/java/Dockerfile)
 
 ## Why
 
