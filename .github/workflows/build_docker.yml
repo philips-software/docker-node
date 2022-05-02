@@ -34,13 +34,13 @@ jobs:
             tags: java stable-java lts-java 16-java 16.15-java 16.15.0-java 16.15.0-buster-java
           - name: Build node 17
             dockerfile: current/vanilla
-            tags: current 17 17.3 17.3.0 17.3.0-buster
+            tags: current 17 17.9 17.9.0 17.9.0-buster
           - name: Build node 17 with yarn 2
             dockerfile: current/yarn2
-            tags: current-yarn2 17-yarn2 17.3-yarn2 17.3.0-yarn2 17.3.0-buster-yarn2
+            tags: current-yarn2 17-yarn2 17.9-yarn2 17.9.0-yarn2 17.9.0-buster-yarn2
           - name: Build node 17 with java
             dockerfile: current/java
-            tags: current-java 17-java 17.3-java 17.3.0-java 17.3.0-buster-java
+            tags: current-java 17-java 17.9-java 17.9.0-java 17.9.0-buster-java
     steps:
       - uses: actions/checkout@v3
       - name: ${{ matrix.name }}
