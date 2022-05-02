@@ -17,22 +17,16 @@ jobs:
     strategy:
       matrix:
         include:
-          - name: Build node 12
-            dockerfile: 12/vanilla
-            tags: 12 12.22 12.22.8 12.22.8-buster
-          - name: Build node 12 java
-            dockerfile: 12/java
-            tags: 12-java 12.22-java 12.22.8-java 12.22.8-buster-slim-java
           - name: Build node 14
             dockerfile: 14/vanilla
-            tags: 14 14.18 14.18.2 14.18.2-buster
+            tags: 14 14.19 14.19.1 14.19.1-buster
           - name: Build node 14 with java
             dockerfile: 14/java
-            tags: 14-java 14.18-java 14.18.2-java 14.18.2-buster-slim-java
+            tags: 14-java 14.19-java 14.19.1-java 14.19.1-buster-slim-java
           - name: Build node lts stable
             dockerfile: lts/vanilla
             tags: latest stable lts 16 16.13 16.13.1 16.13.1-buster
-          - name: Build node lts stable yarn 2 
+          - name: Build node lts stable yarn 2
             dockerfile: lts/yarn2
             tags: yarn2 stable-yarn2 lts-yarn2 16-yarn2 16.13-yarn2 16.13.1-yarn2 16.13.1-buster-yarn2
           - name: Build node lts stable java

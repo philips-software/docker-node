@@ -8,11 +8,6 @@ This repo will contain docker images with node
 Current versions available:
 ```
 .
-├── 12
-│   ├── java
-│   │   └── Dockerfile
-│   └── vanilla
-│       └── Dockerfile
 ├── 14
 │   ├── java
 │   │   └── Dockerfile
@@ -39,7 +34,7 @@ Images can be found on [https://hub.docker.com/r/philipssoftware/node/](https://
 
 ```
 docker run philipssoftware/node:lts node --version
-docker run philipssoftware/node:12-java node --version && java -version
+docker run philipssoftware/node:14-java node --version && java -version
 ```
 
 ## Content
@@ -51,20 +46,20 @@ The images obviously contain nodeJS, but also two other files:
 ### REPO
 
 This file has a url to the REPO with specific commit-sha of the build.
-Example: 
+Example:
 
 ```
-$ docker run philipssoftware/node:12 cat REPO
+$ docker run philipssoftware/node:14 cat REPO
 https://github.com/philips-software/docker-node/tree/facb2271e5a563e5d6f65ca3f475cefac37b8b6c
 ```
 
 ### TAGS
 
-This contains all the similar tags at the point of creation. 
+This contains all the similar tags at the point of creation.
 
 ```
-$ docker run philipssoftware/node:12 cat TAGS
-node node:stable node:12 node:12.22 node:12.22.1 node:12.22.1-stretch
+$ docker run philipssoftware/node:14 cat TAGS
+node node:stable node:14 node:14.19.1 node:14.19.1 node:14.19.1-stretch
 ```
 
 You can use this to pin down a version of the container from an existing development build for production. When using `node:11` for development. This ensures that you've got all security updates in your build. If you want to pin the version of your image down for production, you can use this file inside of the container to look for the most specific tag, the last one.
@@ -90,10 +85,7 @@ Currently 17.0.1 is supposed to be the Stable version of Node, but due to an err
 - `current` `node:17` `node:17.3` `node:17.3.0` `node:17.3.0-buster` [current/vanilla/Dockerfile](current/vanilla/Dockerfile)
 
 ### nodeJS 14 - not recommended (use `stable` or `lts`)
-- `node:14` `node:14.18` `node:14.18.2` `node:14.18.2-buster-slim` [14/vanilla/Dockerfile](14/vanilla/Dockerfile)
-
-### nodeJS 12 - not recommended (use `stable` or `lts`)
-- `node:12` `node:12.22` `node:12.22.8` `node:12.22.8-buster-slim` [12/vanilla/Dockerfile](12/vanilla/Dockerfile)
+- `node:14` `node:14.19` `node:14.19.1` `node:14.19.1-buster-slim` [14/vanilla/Dockerfile](14/vanilla/Dockerfile)
 
 ## Tags with yarn2
 
@@ -112,10 +104,7 @@ Currently 17.0.1 is supposed to be the Stable version of Node, but due to an err
 - `node:current-java` `node:17-java` `node:17.3-java` `node:17.3.0-java` `node:17.3.0-buster-java` [current/java/Dockerfile](current/java/Dockerfile)`
 
 ### nodeJS 14 with openjdk - not recommended (use `stable` or `lts`)
-- `node:14-java` `node:14.18-java` `node:14.18.2-java` `node:14.18.2-buster-slim-java` [14/java/Dockerfile](14/java/Dockerfile)
-
-### nodeJS 12 with openjdk - not recommended (use `stable` or `lts`)
-- `node:12-java` `node:12.22-java` `node:12.22.8-java` `node:12.22.8-buster-slim-java` [12/java/Dockerfile](12/java/Dockerfile)
+- `node:14-java` `node:14.19-java` `node:14.19.1-java` `node:14.19.1-buster-slim-java` [14/java/Dockerfile](14/java/Dockerfile)
 
 ## Why
 
@@ -148,7 +137,7 @@ This module is part of the Philips Forest.
                                                     / __\__  _ __ ___  ___| |_
                                                    / _\/ _ \| '__/ _ \/ __| __|
                                                   / / | (_) | | |  __/\__ \ |_
-                                                  \/   \___/|_|  \___||___/\__|  
+                                                  \/   \___/|_|  \___||___/\__|
 
                                                                  Infrastructure
 ```
