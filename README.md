@@ -8,38 +8,30 @@ This repo will contain docker images with node
 Current versions available:
 ```
 .
-├── 12
-│   ├── java
-│   │   └── Dockerfile
-│   └── vanilla
-│       └── Dockerfile
 ├── 14
 │   ├── java
-│   │   └── Dockerfile
 │   └── vanilla
-│       └── Dockerfile
 ├── 16
 │   ├── java
-│   │   └── Dockerfile
 │   ├── vanilla
-│   │   └── Dockerfile
 │   └── yarn2
-│       └── Dockerfile
 ├── 17
 │   ├── java
-│   │   └── Dockerfile
 │   ├── vanilla
-│   │   └── Dockerfile
 │   └── yarn2
-│       └── Dockerfile
+├── 18
+│   ├── java
+│   ├── vanilla
+│   └── yarn2
 ```
+
 ## Usage
 
 Images can be found on [https://hub.docker.com/r/philipssoftware/node/](https://hub.docker.com/r/philipssoftware/node/).
 
 ```
 docker run philipssoftware/node:lts node --version
-docker run philipssoftware/node:12-java node --version && java -version
+docker run philipssoftware/node:14-java node --version && java -version
 ```
 
 ## Content
@@ -51,20 +43,20 @@ The images obviously contain nodeJS, but also two other files:
 ### REPO
 
 This file has a url to the REPO with specific commit-sha of the build.
-Example: 
+Example:
 
 ```
-$ docker run philipssoftware/node:12 cat REPO
+$ docker run philipssoftware/node:14 cat REPO
 https://github.com/philips-software/docker-node/tree/facb2271e5a563e5d6f65ca3f475cefac37b8b6c
 ```
 
 ### TAGS
 
-This contains all the similar tags at the point of creation. 
+This contains all the similar tags at the point of creation.
 
 ```
-$ docker run philipssoftware/node:12 cat TAGS
-node node:stable node:12 node:12.22 node:12.22.1 node:12.22.1-stretch
+$ docker run philipssoftware/node:14 cat TAGS
+node node:stable node:14 node:14.19.1 node:14.19.1 node:14.19.1-stretch
 ```
 
 You can use this to pin down a version of the container from an existing development build for production. When using `node:11` for development. This ensures that you've got all security updates in your build. If you want to pin the version of your image down for production, you can use this file inside of the container to look for the most specific tag, the last one.
@@ -74,48 +66,41 @@ You can use this to pin down a version of the container from an existing develop
 If you want to know the version of Node (or Java if available), you can do the following:
 
 ```
-$ docker run -it philipssoftware/node:12
+$ docker run -it philipssoftware/node:18
 ```
-
-## LTS & STABLE
-
-Currently 17.0.1 is supposed to be the Stable version of Node, but due to an error in OpenSSL 3.x we cannot use it together with the GitHub checkout action. Therefore we've pointed Stable to LTS in order to not break the latest version of the node image.
 
 ## Simple Tags
 
-### nodeJS lts / stable
-- `node` `node:stable` `node:lts` `node:16` `node:16.13` `node:16.13.1` `node:16.13.1-buster` [lts/vanilla/Dockerfile](lts/vanilla/Dockerfile)
-
 ### nodeJS current
-- `current` `node:17` `node:17.3` `node:17.3.0` `node:17.3.0-buster` [current/vanilla/Dockerfile](current/vanilla/Dockerfile)
+- `node:current` `node:latest` `node:18` `node:18.0` `node:18.0.0` `node:18.0.0-buster` [current/vanilla/Dockerfile](current/vanilla/Dockerfile)
+
+### nodeJS lts / stable
+- `node:stable` `node:lts` `node:16` `node:16.15` `node:16.15.0` `node:16.15.0-buster` [lts/vanilla/Dockerfile](lts/vanilla/Dockerfile)
 
 ### nodeJS 14 - not recommended (use `stable` or `lts`)
-- `node:14` `node:14.18` `node:14.18.2` `node:14.18.2-buster-slim` [14/vanilla/Dockerfile](14/vanilla/Dockerfile)
+- `node:14` `node:14.19` `node:14.19.1` `node:14.19.1-buster-slim` [14/vanilla/Dockerfile](14/vanilla/Dockerfile)
 
-### nodeJS 12 - not recommended (use `stable` or `lts`)
-- `node:12` `node:12.22` `node:12.22.8` `node:12.22.8-buster-slim` [12/vanilla/Dockerfile](12/vanilla/Dockerfile)
+### nodeJS 17 - not recommended (use `stable` or `lts`)
+- `node:17` `node:17.9` `node:17.9.0` `node:17.9.0-buster` [current/vanilla/Dockerfile](current/vanilla/Dockerfile)
 
 ## Tags with yarn2
 
-### nodeJS lts / stable - Yarn 2
-- `node:yarn2` `node:stable-yarn2` `node:lts-yarn2` `node:16-yarn2` `node:16.13-yarn2` `node:16.13.1-yarn2` `node:16.13.1-buster-yarn2` [lts/yarn2/Dockerfile](lts/yarn2/Dockerfile)
-
 ### nodeJS current - Yarn 2
--  `node:current-yarn2` `node:17-yarn2` `node:17.3-yarn2` `node:17.3.0-yarn2` `node:17.3.0-buster-yarn2` [current/yarn2/Dockerfile](current/yarn2/Dockerfile)
+-  `node:latest-yarn2` `node:current-yarn2` `node:18-yarn2` `node:18.0-yarn2` `node:18.0.0-yarn2` `node:18.0.0-buster-yarn2` [current/yarn2/Dockerfile](current/yarn2/Dockerfile)
+
+### nodeJS lts / stable - Yarn 2
+- `node:yarn2` `node:stable-yarn2` `node:lts-yarn2` `node:16-yarn2` `node:16.15-yarn2` `node:16.15.0-yarn2` `node:16.15.0-buster-yarn2` [lts/yarn2/Dockerfile](lts/yarn2/Dockerfile)
 
 ## Tags with openjdk
 
 ### nodeJS lts / stable with openjdk
-- `node:java` `node:stable-java` `node:lts-java` `node:16-java` `node:16.13-java` `node:16.13.1-java` `node:16.13.1-buster-java` [lts/java/Dockerfile](lts/java/Dockerfile)`
+- `node:java` `node:stable-java` `node:lts-java` `node:16-java` `node:16.15-java` `node:16.15.0-java` `node:16.15.0-buster-java` [lts/java/Dockerfile](lts/java/Dockerfile)`
 
 ### nodeJS current with openjdk
-- `node:current-java` `node:17-java` `node:17.3-java` `node:17.3.0-java` `node:17.3.0-buster-java` [current/java/Dockerfile](current/java/Dockerfile)`
+- `node:current-java` `node:17-java` `node:17.9-java` `node:17.9.0-java` `node:17.9.0-buster-java` [current/java/Dockerfile](current/java/Dockerfile)`
 
 ### nodeJS 14 with openjdk - not recommended (use `stable` or `lts`)
-- `node:14-java` `node:14.18-java` `node:14.18.2-java` `node:14.18.2-buster-slim-java` [14/java/Dockerfile](14/java/Dockerfile)
-
-### nodeJS 12 with openjdk - not recommended (use `stable` or `lts`)
-- `node:12-java` `node:12.22-java` `node:12.22.8-java` `node:12.22.8-buster-slim-java` [12/java/Dockerfile](12/java/Dockerfile)
+- `node:14-java` `node:14.19-java` `node:14.19.1-java` `node:14.19.1-buster-slim-java` [14/java/Dockerfile](14/java/Dockerfile)
 
 ## Why
 
@@ -148,7 +133,7 @@ This module is part of the Philips Forest.
                                                     / __\__  _ __ ___  ___| |_
                                                    / _\/ _ \| '__/ _ \/ __| __|
                                                   / / | (_) | | |  __/\__ \ |_
-                                                  \/   \___/|_|  \___||___/\__|  
+                                                  \/   \___/|_|  \___||___/\__|
 
                                                                  Infrastructure
 ```

@@ -1,4 +1,4 @@
-FROM node:12.22.8-buster-slim
+FROM node:18.0.0-buster
 LABEL maintainer="Forest Keepers <Jeroen.knoops@philips.com>"
 
 RUN apt-get update && \
@@ -9,13 +9,16 @@ RUN apt-get update && \
       wget \
       openssl \
       bash \
-      net-tools && \
+      net-tools \
+      tar \
+      default-jdk && \
     rm -rf /var/lib/apt/lists/*
 
 RUN mkdir /app
 
-RUN yarn set version latest && \
-    yarn global add lerna
+RUN yarn global add lerna
+
+ENV NODE_OPTIONS='--openssl-legacy-provider'
 
 WORKDIR /app
 
@@ -30,6 +33,8 @@ REPO: $(cat /app/REPO)\n\
 ----------------------------------------------------------------------------------------------\n\
 NODE: $(node --version)\n\
 NPM: $(npm --version)\n\
+YARN: $(yarn --version)\n\
+JAVA: $(java -version 2>&1 | head -n 1 | awk -F '"' '{print $2}')\n\
 ----------------------------------------------------------------------------------------------"\
     > /etc/motd
 
