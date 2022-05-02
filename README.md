@@ -79,7 +79,7 @@ Currently 17.0.1 is supposed to be the Stable version of Node, but due to an err
 ## Simple Tags
 
 ### nodeJS lts / stable
-- `node` `node:stable` `node:lts` `node:16` `node:16.13` `node:16.13.1` `node:16.13.1-buster` [lts/vanilla/Dockerfile](lts/vanilla/Dockerfile)
+- `node` `node:stable` `node:lts` `node:16` `node:16.15` `node:16.15.0` `node:16.15.0-buster` [lts/vanilla/Dockerfile](lts/vanilla/Dockerfile)
 
 ### nodeJS current
 - `current` `node:17` `node:17.3` `node:17.3.0` `node:17.3.0-buster` [current/vanilla/Dockerfile](current/vanilla/Dockerfile)
@@ -90,7 +90,7 @@ Currently 17.0.1 is supposed to be the Stable version of Node, but due to an err
 ## Tags with yarn2
 
 ### nodeJS lts / stable - Yarn 2
-- `node:yarn2` `node:stable-yarn2` `node:lts-yarn2` `node:16-yarn2` `node:16.13-yarn2` `node:16.13.1-yarn2` `node:16.13.1-buster-yarn2` [lts/yarn2/Dockerfile](lts/yarn2/Dockerfile)
+- `node:yarn2` `node:stable-yarn2` `node:lts-yarn2` `node:16-yarn2` `node:16.15-yarn2` `node:16.15.0-yarn2` `node:16.15.0-buster-yarn2` [lts/yarn2/Dockerfile](lts/yarn2/Dockerfile)
 
 ### nodeJS current - Yarn 2
 -  `node:current-yarn2` `node:17-yarn2` `node:17.3-yarn2` `node:17.3.0-yarn2` `node:17.3.0-buster-yarn2` [current/yarn2/Dockerfile](current/yarn2/Dockerfile)
@@ -98,7 +98,7 @@ Currently 17.0.1 is supposed to be the Stable version of Node, but due to an err
 ## Tags with openjdk
 
 ### nodeJS lts / stable with openjdk
-- `node:java` `node:stable-java` `node:lts-java` `node:16-java` `node:16.13-java` `node:16.13.1-java` `node:16.13.1-buster-java` [lts/java/Dockerfile](lts/java/Dockerfile)`
+- `node:java` `node:stable-java` `node:lts-java` `node:16-java` `node:16.15-java` `node:16.15.0-java` `node:16.15.0-buster-java` [lts/java/Dockerfile](lts/java/Dockerfile)`
 
 ### nodeJS current with openjdk
 - `node:current-java` `node:17-java` `node:17.3-java` `node:17.3.0-java` `node:17.3.0-buster-java` [current/java/Dockerfile](current/java/Dockerfile)`
