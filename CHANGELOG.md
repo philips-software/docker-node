@@ -5,12 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project uses the version of main tool as main version number .
 
 ### Changed
+- v14.19.2 / v16.15.0 (LTS / stable / active) / v18.1.0 (current)
+- v14.19.2 / v16.15.0 (LTS / stable / active) / v18.0.0 (current)
 - v12.22.8 / v14.18.2 / v16.13.1 (LTS/stable) / v17.3.0 (current)
 - Add `current` to 17.1.0
 - Currently 17.0.1 is supposed to be the Stable version of Node, but due to an error in OpenSSL 3.x we cannot use it together with the GitHub checkout action. Therefore we've pointed Stable to LTS in order to not break the latest version of the node image.
 - v12.22.7 / v14.18.1 / v16.13.0 (LTS) / v17.0.1 (Stable)
 - v12.22.6 / v14.17.6 / v15.14.0 / v16.9.1
-- Add yarn2 version 
+- Add yarn2 version
 - v12.22.5 / v14.17.5 / v15.14.0 / v16.7.0
 - Add 16 as stable
 - v12.22.1 / v14.16.1 / v15.14.0
@@ -41,7 +43,7 @@ and this project uses the version of main tool as main version number .
 - [#9] - Add prefix docker- in repository name
 - (ci) Fixes small typo in greetings message
 - (ci) Uses Github Action instead of travis-ci
-- Better Actions workflow 
+- Better Actions workflow
 - node:lts --> 10.16.3
 - node:stable --> 12.9.0
 - Uses Github Actions instead of travis-ci

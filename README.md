@@ -72,7 +72,7 @@ $ docker run -it philipssoftware/node:18
 ## Simple Tags
 
 ### nodeJS current
-- `node:current` `node:latest` `node:18` `node:18.0` `node:18.0.0` `node:18.0.0-buster` [current/vanilla/Dockerfile](current/vanilla/Dockerfile)
+- `node:current` `node:latest` `node:18` `node:18.1` `node:18.1.0` `node:18.1.0-buster` [current/vanilla/Dockerfile](current/vanilla/Dockerfile)
 
 ### nodeJS lts / stable
 - `node:stable` `node:lts` `node:16` `node:16.15` `node:16.15.0` `node:16.15.0-buster` [lts/vanilla/Dockerfile](lts/vanilla/Dockerfile)
@@ -86,7 +86,7 @@ $ docker run -it philipssoftware/node:18
 ## Tags with yarn2
 
 ### nodeJS current - Yarn 2
--  `node:latest-yarn2` `node:current-yarn2` `node:18-yarn2` `node:18.0-yarn2` `node:18.0.0-yarn2` `node:18.0.0-buster-yarn2` [current/yarn2/Dockerfile](current/yarn2/Dockerfile)
+-  `node:latest-yarn2` `node:current-yarn2` `node:18-yarn2` `node:18.1-yarn2` `node:18.1.0-yarn2` `node:18.1.0-buster-yarn2` [current/yarn2/Dockerfile](current/yarn2/Dockerfile)
 
 ### nodeJS lts / stable - Yarn 2
 - `node:yarn2` `node:stable-yarn2` `node:lts-yarn2` `node:16-yarn2` `node:16.15-yarn2` `node:16.15.0-yarn2` `node:16.15.0-buster-yarn2` [lts/yarn2/Dockerfile](lts/yarn2/Dockerfile)
