@@ -56,7 +56,7 @@ This contains all the similar tags at the point of creation.
 
 ```
 $ docker run philipssoftware/node:14 cat TAGS
-node node:stable node:14 node:14.19.1 node:14.19.1 node:14.19.1-stretch
+node node:stable node:14 node:14.19.3 node:14.19.3 node:14.19.3-stretch
 ```
 
 You can use this to pin down a version of the container from an existing development build for production. When using `node:11` for development. This ensures that you've got all security updates in your build. If you want to pin the version of your image down for production, you can use this file inside of the container to look for the most specific tag, the last one.
@@ -72,13 +72,13 @@ $ docker run -it philipssoftware/node:18
 ## Simple Tags
 
 ### nodeJS current
-- `node:current` `node:latest` `node:18` `node:18.1` `node:18.1.0` `node:18.1.0-buster` [current/vanilla/Dockerfile](current/vanilla/Dockerfile)
+- `node:current` `node:latest` `node:18` `node:18.2` `node:18.2.0` `node:18.2.0-buster` [current/vanilla/Dockerfile](current/vanilla/Dockerfile)
 
 ### nodeJS lts / stable
 - `node:stable` `node:lts` `node:16` `node:16.15` `node:16.15.0` `node:16.15.0-buster` [lts/vanilla/Dockerfile](lts/vanilla/Dockerfile)
 
 ### nodeJS 14 - not recommended (use `stable` or `lts`)
-- `node:14` `node:14.19` `node:14.19.1` `node:14.19.1-buster-slim` [14/vanilla/Dockerfile](14/vanilla/Dockerfile)
+- `node:14` `node:14.19` `node:14.19.3` `node:14.19.3-buster-slim` [14/vanilla/Dockerfile](14/vanilla/Dockerfile)
 
 ### nodeJS 17 - not recommended (use `stable` or `lts`)
 - `node:17` `node:17.9` `node:17.9.0` `node:17.9.0-buster` [current/vanilla/Dockerfile](current/vanilla/Dockerfile)
@@ -86,7 +86,7 @@ $ docker run -it philipssoftware/node:18
 ## Tags with yarn2
 
 ### nodeJS current - Yarn 2
--  `node:latest-yarn2` `node:current-yarn2` `node:18-yarn2` `node:18.1-yarn2` `node:18.1.0-yarn2` `node:18.1.0-buster-yarn2` [current/yarn2/Dockerfile](current/yarn2/Dockerfile)
+-  `node:latest-yarn2` `node:current-yarn2` `node:18-yarn2` `node:18.2-yarn2` `node:18.2.0-yarn2` `node:18.2.0-buster-yarn2` [current/yarn2/Dockerfile](current/yarn2/Dockerfile)
 
 ### nodeJS lts / stable - Yarn 2
 - `node:yarn2` `node:stable-yarn2` `node:lts-yarn2` `node:16-yarn2` `node:16.15-yarn2` `node:16.15.0-yarn2` `node:16.15.0-buster-yarn2` [lts/yarn2/Dockerfile](lts/yarn2/Dockerfile)
@@ -100,7 +100,7 @@ $ docker run -it philipssoftware/node:18
 - `node:current-java` `node:17-java` `node:17.9-java` `node:17.9.0-java` `node:17.9.0-buster-java` [current/java/Dockerfile](current/java/Dockerfile)`
 
 ### nodeJS 14 with openjdk - not recommended (use `stable` or `lts`)
-- `node:14-java` `node:14.19-java` `node:14.19.1-java` `node:14.19.1-buster-slim-java` [14/java/Dockerfile](14/java/Dockerfile)
+- `node:14-java` `node:14.19-java` `node:14.19.3-java` `node:14.19.3-buster-slim-java` [14/java/Dockerfile](14/java/Dockerfile)
 
 ## Why
 

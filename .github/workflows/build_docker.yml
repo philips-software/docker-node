@@ -19,10 +19,10 @@ jobs:
         include:
           - name: Build node 14
             dockerfile: 14/vanilla
-            tags: 14 14.19 14.19.1 14.19.1-buster
+            tags: 14 14.19 14.19.3 14.19.3-buster
           - name: Build node 14 with java
             dockerfile: 14/java
-            tags: 14-java 14.19-java 14.19.1-java 14.19.1-buster-slim-java
+            tags: 14-java 14.19-java 14.19.3-java 14.19.3-buster-slim-java
 
           - name: Build node lts stable
             dockerfile: lts/vanilla
@@ -46,13 +46,13 @@ jobs:
 
           - name: Build node 18
             dockerfile: current/vanilla
-            tags: latest current 18 18.1 18.1.0 18.1.0-buster
+            tags: latest current 18 18.2 18.2.0 18.2.0-buster
           - name: Build node 18 with yarn 2
             dockerfile: current/yarn2
-            tags: yarn2 current-yarn2 18-yarn2 18.1-yarn2 18.1.0-yarn2 18.1.0-buster-yarn2
+            tags: yarn2 current-yarn2 18-yarn2 18.2-yarn2 18.2.0-yarn2 18.2.0-buster-yarn2
           - name: Build node 18 with java
             dockerfile: current/java
-            tags: java current-java 18-java 18.1-java 18.1.0-java 18.1.0-buster-java
+            tags: java current-java 18-java 18.2-java 18.2.0-java 18.2.0-buster-java
     steps:
       - uses: actions/checkout@v3
       - name: ${{ matrix.name }}
