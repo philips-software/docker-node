@@ -5,8 +5,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project uses the version of main tool as main version number .
 
 ### Changed
-- v14.19.2 / v16.15.0 (LTS / stable / active) / v18.1.0 (current)
-- v14.19.2 / v16.15.0 (LTS / stable / active) / v18.0.0 (current)
+- v14.19.3 / v16.15.0 (LTS / stable / active) / v18.2.0 (current / latest)
+- v14.19.1 / v16.15.0 (LTS / stable / active) / v18.1.0 (current)
+- v14.19.1 / v16.15.0 (LTS / stable / active) / v18.0.0 (current)
 - v12.22.8 / v14.18.2 / v16.13.1 (LTS/stable) / v17.3.0 (current)
 - Add `current` to 17.1.0
 - Currently 17.0.1 is supposed to be the Stable version of Node, but due to an error in OpenSSL 3.x we cannot use it together with the GitHub checkout action. Therefore we've pointed Stable to LTS in order to not break the latest version of the node image.
