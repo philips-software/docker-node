@@ -72,32 +72,32 @@ $ docker run -it philipssoftware/node:18
 ## Simple Tags
 
 ### nodeJS current
-- `node:current` `node:latest` `node:18` `node:18.2` `node:18.2.0` `node:18.2.0-buster` [current/vanilla/Dockerfile](current/vanilla/Dockerfile)
+- `node:current` `node:latest` `node:18` `node:18.3` `node:18.3.0` `node:18.3.0-buster` [current/vanilla/Dockerfile](current/vanilla/Dockerfile)
 
 ### nodeJS lts / stable
-- `node:stable` `node:lts` `node:16` `node:16.15` `node:16.15.0` `node:16.15.0-buster` [lts/vanilla/Dockerfile](lts/vanilla/Dockerfile)
+- `node:stable` `node:lts` `node:16` `node:16.15` `node:16.15.1` `node:16.15.1-buster` [lts/vanilla/Dockerfile](lts/vanilla/Dockerfile)
 
 ### nodeJS 14 - not recommended (use `stable` or `lts`)
 - `node:14` `node:14.19` `node:14.19.3` `node:14.19.3-buster-slim` [14/vanilla/Dockerfile](14/vanilla/Dockerfile)
 
 ### nodeJS 17 - not recommended (use `stable` or `lts`)
-- `node:17` `node:17.9` `node:17.9.0` `node:17.9.0-buster` [current/vanilla/Dockerfile](current/vanilla/Dockerfile)
+- `node:17` `node:17.9` `node:17.9.1` `node:17.9.1-buster` [current/vanilla/Dockerfile](current/vanilla/Dockerfile)
 
 ## Tags with yarn2
 
 ### nodeJS current - Yarn 2
--  `node:latest-yarn2` `node:current-yarn2` `node:18-yarn2` `node:18.2-yarn2` `node:18.2.0-yarn2` `node:18.2.0-buster-yarn2` [current/yarn2/Dockerfile](current/yarn2/Dockerfile)
+-  `node:latest-yarn2` `node:current-yarn2` `node:18-yarn2` `node:18.3-yarn2` `node:18.3.0-yarn2` `node:18.3.0-buster-yarn2` [current/yarn2/Dockerfile](current/yarn2/Dockerfile)
 
 ### nodeJS lts / stable - Yarn 2
-- `node:yarn2` `node:stable-yarn2` `node:lts-yarn2` `node:16-yarn2` `node:16.15-yarn2` `node:16.15.0-yarn2` `node:16.15.0-buster-yarn2` [lts/yarn2/Dockerfile](lts/yarn2/Dockerfile)
+- `node:yarn2` `node:stable-yarn2` `node:lts-yarn2` `node:16-yarn2` `node:16.15-yarn2` `node:16.15.1-yarn2` `node:16.15.1-buster-yarn2` [lts/yarn2/Dockerfile](lts/yarn2/Dockerfile)
 
 ## Tags with openjdk
 
 ### nodeJS lts / stable with openjdk
-- `node:java` `node:stable-java` `node:lts-java` `node:16-java` `node:16.15-java` `node:16.15.0-java` `node:16.15.0-buster-java` [lts/java/Dockerfile](lts/java/Dockerfile)`
+- `node:java` `node:stable-java` `node:lts-java` `node:16-java` `node:16.15-java` `node:16.15.1-java` `node:16.15.1-buster-java` [lts/java/Dockerfile](lts/java/Dockerfile)`
 
 ### nodeJS current with openjdk
-- `node:current-java` `node:17-java` `node:17.9-java` `node:17.9.0-java` `node:17.9.0-buster-java` [current/java/Dockerfile](current/java/Dockerfile)`
+- `node:current-java` `node:17-java` `node:17.9-java` `node:17.9.1-java` `node:17.9.1-buster-java` [current/java/Dockerfile](current/java/Dockerfile)`
 
 ### nodeJS 14 with openjdk - not recommended (use `stable` or `lts`)
 - `node:14-java` `node:14.19-java` `node:14.19.3-java` `node:14.19.3-buster-slim-java` [14/java/Dockerfile](14/java/Dockerfile)
