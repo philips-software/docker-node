@@ -19,20 +19,20 @@ jobs:
         include:
           - name: Build node 14
             dockerfile: 14/vanilla
-            tags: 14 14.19 14.19.3 14.19.3-buster
+            tags: 14 14.20 14.20.0 14.20.0-buster
           - name: Build node 14 with java
             dockerfile: 14/java
-            tags: 14-java 14.19-java 14.19.3-java 14.19.3-buster-slim-java
+            tags: 14-java 14.20-java 14.20.0-java 14.20.0-buster-slim-java
 
           - name: Build node lts stable
             dockerfile: lts/vanilla
-            tags: stable lts 16 16.15 16.15.1 16.15.1-buster
+            tags: stable lts 16 16.16 16.16.0 16.16.0-buster
           - name: Build node lts stable yarn 2
             dockerfile: lts/yarn2
-            tags: stable-yarn2 lts-yarn2 16-yarn2 16.15-yarn2 16.15.1-yarn2 16.15.1-buster-yarn2
+            tags: stable-yarn2 lts-yarn2 16-yarn2 16.16-yarn2 16.16.0-yarn2 16.16.0-buster-yarn2
           - name: Build node lts stable java
             dockerfile: lts/java
-            tags: stable-java lts-java 16-java 16.15-java 16.15.1-java 16.15.1-buster-java
+            tags: stable-java lts-java 16-java 16.16-java 16.16.0-java 16.16.0-buster-java
 
           - name: Build node 17
             dockerfile: 17/vanilla
@@ -46,13 +46,13 @@ jobs:
 
           - name: Build node 18
             dockerfile: current/vanilla
-            tags: latest current 18 18.3 18.3.0 18.3.0-buster
+            tags: latest current 18 18.7 18.7.0 18.7.0-buster
           - name: Build node 18 with yarn 2
             dockerfile: current/yarn2
-            tags: yarn2 current-yarn2 18-yarn2 18.3-yarn2 18.3.0-yarn2 18.3.0-buster-yarn2
+            tags: yarn2 current-yarn2 18-yarn2 18.7-yarn2 18.7.0-yarn2 18.7.0-buster-yarn2
           - name: Build node 18 with java
             dockerfile: current/java
-            tags: java current-java 18-java 18.3-java 18.3.0-java 18.3.0-buster-java
+            tags: java current-java 18-java 18.7-java 18.7.0-java 18.7.0-buster-java
     steps:
       - uses: actions/checkout@v3
       - name: ${{ matrix.name }}
