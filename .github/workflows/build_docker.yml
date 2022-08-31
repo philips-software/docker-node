@@ -26,13 +26,13 @@ jobs:
 
           - name: Build node lts stable
             dockerfile: lts/vanilla
-            tags: stable lts 16 16.16 16.16.0 16.16.0-buster
+            tags: stable lts 16 16.17 16.17.0 16.17.0-buster
           - name: Build node lts stable yarn 2
             dockerfile: lts/yarn2
-            tags: stable-yarn2 lts-yarn2 16-yarn2 16.16-yarn2 16.16.0-yarn2 16.16.0-buster-yarn2
+            tags: stable-yarn2 lts-yarn2 16-yarn2 16.17-yarn2 16.17.0-yarn2 16.17.0-buster-yarn2
           - name: Build node lts stable java
             dockerfile: lts/java
-            tags: stable-java lts-java 16-java 16.16-java 16.16.0-java 16.16.0-buster-java
+            tags: stable-java lts-java 16-java 16.17-java 16.17.0-java 16.17.0-buster-java
 
           - name: Build node 17
             dockerfile: 17/vanilla
@@ -46,13 +46,13 @@ jobs:
 
           - name: Build node 18
             dockerfile: current/vanilla
-            tags: latest current 18 18.7 18.7.0 18.7.0-buster
+            tags: latest current 18 18.8 18.8.0 18.8.0-buster
           - name: Build node 18 with yarn 2
             dockerfile: current/yarn2
-            tags: yarn2 current-yarn2 18-yarn2 18.7-yarn2 18.7.0-yarn2 18.7.0-buster-yarn2
+            tags: yarn2 current-yarn2 18-yarn2 18.8-yarn2 18.8.0-yarn2 18.8.0-buster-yarn2
           - name: Build node 18 with java
             dockerfile: current/java
-            tags: java current-java 18-java 18.7-java 18.7.0-java 18.7.0-buster-java
+            tags: java current-java 18-java 18.8-java 18.8.0-java 18.8.0-buster-java
     steps:
       - uses: actions/checkout@v3
       - name: ${{ matrix.name }}
