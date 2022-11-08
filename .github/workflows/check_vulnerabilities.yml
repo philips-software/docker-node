@@ -1,9 +1,9 @@
+name: Check vulnerabilities 
+
 on:
   schedule:
     - cron: '14 15 * * 1'
   workflow_dispatch:
-
-name: Check vulnerabilities 
 
 permissions: 
   id-token: write
