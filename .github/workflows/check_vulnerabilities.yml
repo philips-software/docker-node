@@ -24,7 +24,7 @@ jobs:
           - tag: 18.10.0-buster
           - tag: 18.10.0-buster-yarn2
           - tag: 18.10.0-buster-java
-    uses: philips-software/docker-ci-scripts/.github/workflows/check-vulnerabilities.yaml@check-vulnerabilities
+    uses: philips-software/docker-ci-scripts/.github/workflows/check-vulnerabilities.yaml@main
     with:
       image: philipssoftware/node:${{matrix.tag}}
 
