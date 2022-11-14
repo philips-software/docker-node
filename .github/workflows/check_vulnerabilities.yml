@@ -11,7 +11,7 @@ permissions:
 jobs:
   check:
     name: Check Vulnerabities
-    uses: philips-software/docker-ci-scripts/.github/workflows/check-vulnerabilities.yaml@check-vulnerabilities
+    uses: philips-software/docker-ci-scripts/.github/workflows/check-vulnerabilities.yaml@main
     with:
       image: philipssoftware/node:18.10.0-buster
 
