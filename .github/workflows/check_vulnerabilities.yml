@@ -14,36 +14,3 @@ jobs:
     uses: philips-software/docker-ci-scripts/.github/workflows/check-vulnerabilities.yaml@main
     with:
       image: philipssoftware/node:18.10.0-buster
-    
-  check_osv_scanner:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b # v3.2.0
-      with:
-        fetch-depth: 0
-    - name: Set up Go
-      uses: actions/setup-go@6edd4406fa81c3da01a34fa6f6343087c207a568 # v3.5.0
-      with:
-        go-version: 1.19
-        check-latest: true
-    - name: Install OSV scanner
-      run: go install github.com/google/osv-scanner/cmd/osv-scanner@v1
-    
-    - name: Install Cosign
-      uses: sigstore/cosign-installer@main
-      with:
-        cosign-release: 'v1.13.1'
-    - name: Check install!
-      run: cosign version
-    - name: Verify container
-      run: |
-        COSIGN_EXPERIMENTAL=1 cosign verify philipssoftware/node:18.10.0-buster
-    - name: Get SBOM
-      run: |
-        COSIGN_EXPERIMENTAL=1 cosign verify-attestation --type spdx philipssoftware/node:18.10.0-buster| jq '.payload |= @base64d | .payload | fromjson | select( .predicateType=="https://spdx.dev/Document" ) | .predicate.Data | fromjson | .' > spdx.json
-    
-    - name: Scan with OSV scanner
-      run: |
-        osv-scanner --sbom=spdx.json
-
