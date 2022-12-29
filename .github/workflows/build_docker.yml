@@ -1,14 +1,11 @@
 on: [push]
-
 name: Build Docker images
-
 env:
   REGISTRY_USERNAME: ${{ secrets.DOCKER_USERNAME }}
   REGISTRY_TOKEN: '${{ secrets.DOCKER_PASSWORD }}'
   DOCKER_ORGANIZATION: philipssoftware
   GITHUB_ORGANIZATION: philips-software
   KEYLESS: true
-
 jobs:
   build_node:
     permissions:
@@ -24,7 +21,6 @@ jobs:
           - name: Build node 14 with java
             dockerfile: 14/java
             tags: 14-java 14.20-java 14.20.1-java 14.20.1-buster-slim-java
-
           - name: Build node lts stable
             dockerfile: lts/vanilla
             tags: stable lts 16 16.18 16.18.0 16.18.0-buster
@@ -34,7 +30,6 @@ jobs:
           - name: Build node lts stable java
             dockerfile: lts/java
             tags: stable-java lts-java 16-java 16.18-java 16.18.0-java 16.18.0-buster-java
-
           - name: Build node 17
             dockerfile: 17/vanilla
             tags: 17 17.9 17.9.1 17.9.1-buster
@@ -44,7 +39,6 @@ jobs:
           - name: Build node 17 with java
             dockerfile: 17/java
             tags: 17-java 17.9-java 17.9.1-java 17.9.1-buster-java
-
           - name: Build node 18
             dockerfile: current/vanilla
             tags: latest current 18 18.10 18.10.0 18.10.0-buster
@@ -55,9 +49,9 @@ jobs:
             dockerfile: current/java
             tags: java current-java 18-java 18.10-java 18.10.0-java 18.10.0-buster-java
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b # ratchet:actions/checkout@v3
       - name: ${{ matrix.name }}
-        uses: philips-software/docker-ci-scripts@v5.1.0
+        uses: philips-software/docker-ci-scripts@d0045b844f08b0dcb4c62bd4acf6c36877404dae # ratchet:philips-software/docker-ci-scripts@v5.1.0
         with:
           dockerfile: ${{ matrix.dockerfile }}
           image-name: node
@@ -65,7 +59,6 @@ jobs:
           sign: true
           slsa-provenance: true
           sbom: true
-
   test_latest_image:
     name: Test latest image
     runs-on: ubuntu-latest
@@ -73,10 +66,10 @@ jobs:
     if: github.ref == 'refs/heads/main'
     needs: build_node
     steps:
-    - name: Test hello react app
-      run: |
-        npx create-react-app my-app
-        cd my-app
-        npm test
-      env:
-        CI: true
+      - name: Test hello react app
+        run: |
+          npx create-react-app my-app
+          cd my-app
+          npm test
+        env:
+          CI: true
