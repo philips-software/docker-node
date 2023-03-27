@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project uses the version of main tool as main version number .
 
 ### Changed
+- v19.8.1 (current) / v18.15.1 (LTS / stable / active) / v16.19.1 / v14.21.3 
 - v18.10.0 (current / latest) / v16.18.0 (LTS / stable / active) / v14.20.1 
 - v14.20.0 / v16.17.0 (LTS / stable / active) / v18.8.0 (current / latest)
 - v14.20.0 / v16.16.0 (LTS / stable / active) / v18.7.0 (current / latest)

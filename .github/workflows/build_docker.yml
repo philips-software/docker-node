@@ -17,37 +17,40 @@ jobs:
         include:
           - name: Build node 14
             dockerfile: 14/vanilla
-            tags: 14 14.20 14.20.1 14.20.1-buster
+            tags: 14 14.21 14.21.3 14.21.3-buster
           - name: Build node 14 with java
             dockerfile: 14/java
-            tags: 14-java 14.20-java 14.20.1-java 14.20.1-buster-slim-java
-          - name: Build node lts stable
+            tags: 14-java 14.21-java 14.21.3-java 14.21.3-buster-slim-java
+
+          - name: Build node 16
+            dockerfile: 16/vanilla
+            tags: 16 16.19 16.19.1 16.19.1-buster
+          - name: Build node 16 yarn 2
+            dockerfile: 16/yarn2
+            tags: 16-yarn2 16.19-yarn2 16.19.1-yarn2 16.19.1-buster-yarn2
+          - name: Build node 16 java
+            dockerfile: 16/java
+            tags: 16-java 16.19-java 16.19.1-java 16.19.1-buster-java
+
+          - name: Build node LTS / stable 18
             dockerfile: lts/vanilla
-            tags: stable lts 16 16.18 16.18.0 16.18.0-buster
-          - name: Build node lts stable yarn 2
+            tags: stable lts latest 18 18.15 18.15.0 18.15.0-buster
+          - name: Build node LTS / stable 18 with yarn 2
             dockerfile: lts/yarn2
-            tags: stable-yarn2 lts-yarn2 16-yarn2 16.18-yarn2 16.18.0-yarn2 16.18.0-buster-yarn2
-          - name: Build node lts stable java
+            tags: yarn2 stable-yarn2 lts-yarn2 latest-yarn2 18-yarn2 18.15-yarn2 18.15.0-yarn2 18.15.0-buster-yarn2
+          - name: Build node LTS / stable 18 with java
             dockerfile: lts/java
-            tags: stable-java lts-java 16-java 16.18-java 16.18.0-java 16.18.0-buster-java
-          - name: Build node 17
-            dockerfile: 17/vanilla
-            tags: 17 17.9 17.9.1 17.9.1-buster
-          - name: Build node 17 with yarn 2
-            dockerfile: 17/yarn2
-            tags: 17-yarn2 17.9-yarn2 17.9.1-yarn2 17.9.1-buster-yarn2
-          - name: Build node 17 with java
-            dockerfile: 17/java
-            tags: 17-java 17.9-java 17.9.1-java 17.9.1-buster-java
-          - name: Build node 18
+            tags: java stable-java lts-java latest-java 18-java 18.15-java 18.15.0-java 18.15.0-buster-java
+
+          - name: Build node current 19
             dockerfile: current/vanilla
-            tags: latest current 18 18.10 18.10.0 18.10.0-buster
-          - name: Build node 18 with yarn 2
+            tags: current 19 19.8 19.8.1 19.8.1-buster
+          - name: Build node current 19 with yarn 2
             dockerfile: current/yarn2
-            tags: yarn2 current-yarn2 18-yarn2 18.10-yarn2 18.10.0-yarn2 18.10.0-buster-yarn2
-          - name: Build node 18 with java
+            tags: current-yarn2 19-yarn2 19.8-yarn2 19.8.1-yarn2 19.8.1-buster-yarn2
+          - name: Build node current 19 with java
             dockerfile: current/java
-            tags: java current-java 18-java 18.10-java 18.10.0-java 18.10.0-buster-java
+            tags: current-java 19-java 19.8-java 19.8.1-java 19.8.1-buster-java
     steps:
       - uses: actions/checkout@24cb9080177205b6e8c946b17badbe402adc938f # ratchet:actions/checkout@v3
       - name: ${{ matrix.name }}

@@ -1,4 +1,4 @@
-FROM node:17.9.1-buster-slim
+FROM node:19.8.1-buster-slim
 LABEL maintainer="Forest Keepers <Jeroen.knoops@philips.com>"
 
 RUN apt-get update && \
@@ -15,7 +15,9 @@ RUN apt-get update && \
 
 RUN mkdir /app
 
-RUN yarn global add lerna
+RUN yarn set version 3.1.0 && \
+    npm install --g lerna
+
 ENV NODE_OPTIONS='--openssl-legacy-provider'
 
 WORKDIR /app
