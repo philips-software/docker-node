@@ -10,17 +10,17 @@ jobs:
     strategy:
       matrix:
         include:
-          - tag: 14.20.1-buster
-          - tag: 14.20.1-buster-slim-java
-          - tag: 16.18.0-buster
-          - tag: 16.18.0-buster-yarn2
-          - tag: 16.18.0-buster-java
+          - tag: 14.21.3-buster
+          - tag: 14.21.3-buster-slim-java
+          - tag: 16.19.1-buster
+          - tag: 16.19.1-buster-yarn2
+          - tag: 16.19.1-buster-java
           - tag: 17.9.1-buster
           - tag: 17.9.1-buster-yarn2
           - tag: 17.9.1-buster-java
-          - tag: 18.10.0-buster
-          - tag: 18.10.0-buster-yarn2
-          - tag: 18.10.0-buster-java
+          - tag: 18.15.0-buster
+          - tag: 18.15.0-buster-yarn2
+          - tag: 18.15.0-buster-java
     uses: philips-software/docker-ci-scripts/.github/workflows/check-vulnerabilities.yaml@d0045b844f08b0dcb4c62bd4acf6c36877404dae # ratchet:philips-software/docker-ci-scripts/.github/workflows/check-vulnerabilities.yaml@main
     with:
       image: philipssoftware/node:${{matrix.tag}}
