@@ -52,7 +52,7 @@ jobs:
             dockerfile: current/java
             tags: current-java 19-java 19.8-java 19.8.1-java 19.8.1-buster-java
     steps:
-      - uses: actions/checkout@8f4b7f84864484a7bf31766abe9204da3cbe65b3 # ratchet:actions/checkout@v3
+      - uses: actions/checkout@83b7061638ee4956cf7545a6f7efe594e5ad0247 # ratchet:actions/checkout@v3
       - name: ${{ matrix.name }}
         uses: philips-software/docker-ci-scripts@d0045b844f08b0dcb4c62bd4acf6c36877404dae # ratchet:philips-software/docker-ci-scripts@v5.1.0
         with:
